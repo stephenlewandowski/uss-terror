@@ -1,4 +1,5 @@
-if (file.exists("renv/activate.R")) {
+if (!identical(Sys.getenv("R_CONFIG_ACTIVE"), "connect_cloud") &&
+    file.exists("renv/activate.R")) {
   source("renv/activate.R")
 }
 
