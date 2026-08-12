@@ -1,0 +1,34 @@
+Package: USSTerrorMap
+Type: Project
+Title: USS Terror Pacific Deployment Reconstruction
+Version: 0.4.0
+Authors@R: person("Project", "Maintainer", role = c("aut", "cre"), email = "maintainer@example.invalid")
+Description: Reproducible spatial processing, validation, Shiny visualization, static cartography, and QGIS exchange for USS Terror (CM-5), 1943-1946.
+License: file LICENSE
+Encoding: UTF-8
+Imports:
+    bslib,
+    digest,
+    dplyr,
+    DT,
+    geosphere,
+    ggplot2,
+    ggrepel,
+    ggspatial,
+    htmltools,
+    jsonlite,
+    leaflet,
+    lubridate,
+    plotly,
+    readr,
+    readxl,
+    renv,
+    rnaturalearth,
+    rnaturalearthdata,
+    sf,
+    shiny,
+    terra,
+    testthat,
+    tibble,
+    units,
+    yaml

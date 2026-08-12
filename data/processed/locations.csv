@@ -1,0 +1,24 @@
+location_id,location_name,latitude,longitude,coordinate_basis,maximum_uncertainty_nm,event_count,coordinate_variants
+LOC001,Norfolk / Hampton Roads,36.946,-76.33,Harbor-area modeling point,10,1,1
+LOC002,Panama Canal,8.95,-79.5667,Canal transit modeling point,15,1,1
+LOC003,San Francisco Bay,37.8199,-122.4783,Golden Gate transit point,10,5,1
+LOC004,Mare Island Navy Yard,38.1,-122.273,Shipyard centroid,3,1,1
+LOC005,Treasure Island,37.823,-122.37,Base centroid,3,2,1
+LOC006,Pearl Harbor,21.344,-157.975,Harbor centroid,5,12,1
+LOC007,Funafuti,-8.5167,179.2,Atoll/anchorage centroid,12,2,1
+LOC008,Tarawa,1.35,172.93,Atoll operational centroid,15,2,1
+LOC009,Espiritu Santo,-15.5167,167.1833,Harbor centroid,10,1,1
+LOC010,Guadalcanal,-9.433,159.95,Coastal operational centroid,15,1,1
+LOC011,Makin,3.167,172.833,Lagoon centroid,12,2,1
+LOC012,Majuro,7.1167,171.3667,Atoll/anchorage centroid,12,2,1
+LOC013,Kwajalein,8.7167,167.7333,Atoll/anchorage centroid,15,2,1
+LOC014,Enewetak,11.35,162.35,Atoll/anchorage centroid,15,5,1
+LOC015,Saipan,15.2,145.75,Island/anchorage centroid,12,4,1
+LOC016,Guam,13.45,144.65,Harbor centroid,8,1,1
+LOC017,Ulithi,9.55,138.12,Atoll/anchorage centroid,15,3,1
+LOC018,Manus,-2.05,147.33,Harbor centroid,10,1,1
+LOC019,Tinian,14.97,145.62,Island/anchorage centroid,10,1,1
+LOC020,Iwo Jima,24.78,141.34,Estimated offshore fire-support point,8,1,1
+LOC021,Kerama Retto,26.1667,127.3,Anchorage/attack-area modeling point; Kerama Retto anchorage / published attack-area approximation,5,6,1
+LOC022,Buckner Bay,26.22,127.88,Bay centroid,10,3,1
+LOC023,Sasebo,33.16,129.72,Harbor centroid,5,2,1

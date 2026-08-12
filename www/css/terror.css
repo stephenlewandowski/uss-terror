@@ -1,0 +1,83 @@
+:root {
+  --navy: #173b57;
+  --rust: #9b5b32;
+  --paper: #f4f1ea;
+  --ink: #17232c;
+}
+
+body { background: var(--paper); color: var(--ink); }
+.navbar { box-shadow: 0 2px 12px rgba(24, 37, 47, 0.15); padding-top: .32rem; padding-bottom: .32rem; }
+.navbar-brand { max-width: 330px; white-space: normal; padding-top: .35rem; padding-bottom: .35rem; margin-right: 1.4rem; }
+.navbar .nav-link { font-size: .9rem; font-weight: 650; padding-left: .75rem !important; padding-right: .75rem !important; }
+.navbar .dropdown-menu { border: 0; box-shadow: 0 8px 24px rgba(24, 37, 47, .18); padding: .4rem; }
+.navbar .dropdown-item { border-radius: .3rem; font-size: .9rem; padding: .48rem .7rem; }
+.brand-lockup { line-height: 1.12; }
+.brand-kicker { font-family: "Libre Baskerville", Georgia, serif; font-size: 1rem; font-weight: 700; letter-spacing: .025em; }
+.brand-title { font-size: .76rem; font-weight: 600; opacity: .88; margin-top: .1rem; }
+.reconstruction-notice { display: flex; align-items: center; gap: .55rem; min-height: 34px; padding: .42rem 1rem; color: #473d31; background: #f7e9cc; border-bottom: 1px solid #e3cfa7; font-size: .82rem; line-height: 1.25; }
+.reconstruction-notice svg { color: var(--rust); flex: 0 0 auto; }
+.dashboard-grid { display: grid; grid-template-columns: repeat(5, minmax(125px, 1fr)); grid-auto-rows: 84px; gap: .65rem; margin-bottom: .8rem; height: auto !important; flex: 0 0 auto !important; }
+.dashboard-grid > .bslib-value-box { height: 84px !important; min-height: 84px !important; overflow: hidden; }
+.dashboard-grid .value-box-grid, .dashboard-grid .card-body { height: 100% !important; min-height: 0 !important; }
+.dashboard-grid .value-box-grid { display: block !important; padding: .65rem .8rem !important; }
+.dashboard-grid .value-box-title { font-size: .72rem; line-height: 1.08; margin-bottom: .2rem; }
+.dashboard-grid .value-box-value { font-size: clamp(1.05rem, 1.5vw, 1.45rem); line-height: 1.02; white-space: nowrap; }
+.button-row { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem; margin-bottom: .5rem; }
+.evidence-note, .table-note { border-left: 3px solid var(--rust); padding: .65rem .8rem; background: #fffaf0; font-size: .88rem; }
+.terror-popup { min-width: 260px; max-width: 360px; line-height: 1.35; }
+.leaflet-container { background: #dceaf2; }
+.leaflet-tooltip.simple-boundary-label {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #334b5c;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: .01em;
+  padding: 0;
+  text-shadow:
+    -1px -1px 0 rgba(255,255,255,.95),
+     1px -1px 0 rgba(255,255,255,.95),
+    -1px  1px 0 rgba(255,255,255,.95),
+     1px  1px 0 rgba(255,255,255,.95);
+}
+.leaflet-tooltip.simple-boundary-label::before { display: none; }
+.leaflet-control-layers-expanded { max-height: 70vh; overflow-y: auto; }
+.event-detail p { margin-bottom: .62rem; }
+.route-legend { background: rgba(255,255,255,.94); padding: .55rem .7rem; border-radius: .35rem; box-shadow: 0 1px 7px rgba(0,0,0,.22); line-height: 1.38; max-width: 245px; }
+.route-legend small { display: block; margin-top: .35rem; color: #444; }
+.solid-line { color: #173b57; letter-spacing: -2px; }
+.dash-line { color: #b26a2e; letter-spacing: 1px; }
+.dot-line { color: #777; letter-spacing: 2px; }
+.symbol-key { color: #692f1e; }
+.methods-text pre { white-space: pre-wrap; font-family: "Source Sans 3", sans-serif; font-size: .96rem; line-height: 1.55; background: transparent; border: 0; color: var(--ink); }
+.app-footer { padding: .9rem 1.2rem; color: #5b6268; font-size: .82rem; text-align: center; }
+.card { box-shadow: 0 2px 12px rgba(30, 43, 52, .08); border-color: rgba(23,59,87,.13); }
+.card-header { font-family: "Libre Baskerville", Georgia, serif; font-weight: 700; color: var(--navy); }
+.empty-layer-note { padding: .65rem .75rem; margin-bottom: .75rem; color: #66727a; background: #eef1f2; border-radius: .35rem; font-size: .86rem; }
+.mine-review-summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.mine-review-summary-ok { margin-bottom: 1rem; padding: .85rem 1rem; color: #24495b; background: #e3eff3; border: 1px solid #bfd6df; border-radius: .4rem; }
+.mine-summary-lead { font-family: "Libre Baskerville", Georgia, serif; font-weight: 700; color: var(--navy); }
+.mine-summary-counts { display: flex; flex-wrap: wrap; gap: .4rem; }
+.mine-summary-counts span { background: rgba(255,255,255,.72); border: 1px solid rgba(23,59,87,.14); border-radius: 999px; padding: .24rem .58rem; font-size: .8rem; }
+.review-detail-empty { color: #66727a; text-align: center; padding: 4rem 1.2rem; }
+.review-detail-empty svg { font-size: 1.6rem; margin-bottom: .8rem; }
+.review-detail-heading h4 { margin: .65rem 0 .15rem; font-family: "Libre Baskerville", Georgia, serif; color: var(--navy); font-size: 1.05rem; }
+.review-detail-heading p { font-size: .82rem; }
+.decision-badge { display: inline-block; padding: .23rem .52rem; border-radius: 999px; font-size: .7rem; font-weight: 800; letter-spacing: .05em; }
+.decision-badge.accepted { color: #15523e; background: #d8eee5; border: 1px solid #a8d4c2; }
+.decision-badge.rejected { color: #7b281e; background: #f6dcd7; border: 1px solid #dfa9a0; }
+.review-detail-row { display: grid; grid-template-columns: 92px 1fr; gap: .65rem; padding: .38rem 0; border-bottom: 1px solid rgba(23,59,87,.09); font-size: .86rem; }
+.review-detail-label { color: #66727a; font-weight: 700; }
+.review-detail-notes { font-size: .86rem; line-height: 1.5; }
+.map-method-note { max-width: 230px; padding: .45rem .55rem; background: rgba(255,255,255,.94); border-radius: .3rem; box-shadow: 0 1px 6px rgba(0,0,0,.18); font-size: .78rem; line-height: 1.3; }
+@media (max-width: 1100px) {
+  .dashboard-grid { grid-template-columns: repeat(3, minmax(125px, 1fr)); }
+  .navbar-brand { max-width: 265px; }
+}
+@media (max-width: 600px) {
+  .dashboard-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+  .brand-title { display: none; }
+  .reconstruction-notice { align-items: flex-start; }
+  .mine-review-summary { align-items: flex-start; }
+}

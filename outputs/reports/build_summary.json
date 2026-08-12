@@ -1,0 +1,95 @@
+{
+  "generated_utc": "2026-07-24 12:31:37 UTC",
+  "project": "C:/Projects/USSTerrorMap",
+  "r_version": "R version 4.6.1 (2026-06-24 ucrt)",
+  "counts": {
+    "events": 61,
+    "routes": 57,
+    "geodesic_features": 57,
+    "geodesic_parts": 72,
+    "disputed": 1,
+    "uncertainty": 61
+  },
+  "validation": {
+    "errors": 0,
+    "warnings": 5,
+    "info": 0
+  },
+  "qgis_process": "C:\\Users\\slewa\\AppData\\Local/Programs/OSGeo4W/apps/qgis-ltr/bin/qgis_process.exe",
+  "gis_tools": [
+    "C:\\Users\\slewa\\AppData\\Local/Programs/OSGeo4W/apps/qgis-ltr/bin/qgis_process.exe",
+    "C:\\Users\\slewa\\AppData\\Local/Programs/OSGeo4W/bin/qgis-ltr-bin.exe",
+    "C:\\Users\\slewa\\AppData\\Local/Programs/OSGeo4W/bin/ogr2ogr.exe",
+    "C:\\Users\\slewa\\AppData\\Local/Programs/OSGeo4W/bin/ogrinfo.exe"
+  ],
+  "qgis_project_created": false,
+  "qgis_import_package": "C:/Projects/USSTerrorMap/qgis/uss_terror_layers_phase4.gpkg",
+  "static_maps": ["C:/Projects/USSTerrorMap/outputs/static_maps/01_full_pacific_deployment.png", "C:/Projects/USSTerrorMap/outputs/static_maps/01_full_pacific_deployment.pdf", "C:/Projects/USSTerrorMap/outputs/static_maps/02_global_pacific_centered.png", "C:/Projects/USSTerrorMap/outputs/static_maps/02_global_pacific_centered.pdf", "C:/Projects/USSTerrorMap/outputs/static_maps/03_1943_1944_support_operations.png", "C:/Projects/USSTerrorMap/outputs/static_maps/04_iwo_jima_okinawa_1945.png", "C:/Projects/USSTerrorMap/outputs/static_maps/05_kamikaze_withdrawal_repair_1945.png", "C:/Projects/USSTerrorMap/outputs/static_maps/06_postwar_occupation_1945_1946.png", "C:/Projects/USSTerrorMap/outputs/static_maps/07_confidence_and_uncertainty.png"],
+  "year_filter": [
+    {
+      "selection": "All years",
+      "visible_event_count": 61,
+      "visible_event_ids": "1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;39;40;41;42;43;44;45;46;47;48;49;50;51;52;53;54;55;56;57;58;59;60;61",
+      "visible_route_count": 56,
+      "visible_route_ids": "L001;L002;L003;L004;L005;L006;L007;L008;L009;L010;L011;L012;L013;L014;L015;L016;L017;L018;L019;L020;L021;L022;L023;L024;L025;L026;L027;L029;L030;L031;L032;L033;L034;L035;L036;L037;L038;L039;L040;L041;L042;L043;L044;L045;L046;L047;L048;L049;L050;L051;L052;L053;L054;L055;L056;L057",
+      "disputed_routes_included": false,
+      "pacific_map_ids_match_filter": true
+    },
+    {
+      "selection": "1943",
+      "visible_event_count": 9,
+      "visible_event_ids": "1;2;3;4;5;6;7;8;9",
+      "visible_route_count": 7,
+      "visible_route_ids": "L001;L002;L003;L004;L005;L006;L007",
+      "disputed_routes_included": false,
+      "pacific_map_ids_match_filter": true
+    },
+    {
+      "selection": "1944",
+      "visible_event_count": 26,
+      "visible_event_ids": "9;10;11;12;13;14;15;16;17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34",
+      "visible_route_count": 29,
+      "visible_route_ids": "L008;L009;L010;L011;L012;L013;L014;L015;L016;L017;L018;L019;L020;L021;L022;L023;L024;L025;L026;L027;L029;L030;L031;L032;L033;L034;L035;L036;L037",
+      "disputed_routes_included": false,
+      "pacific_map_ids_match_filter": true
+    },
+    {
+      "selection": "1945",
+      "visible_event_count": 25,
+      "visible_event_ids": "34;35;36;37;38;39;40;41;42;43;44;45;46;47;48;49;50;51;52;53;54;55;56;57;58",
+      "visible_route_count": 17,
+      "visible_route_ids": "L038;L039;L040;L041;L042;L043;L044;L045;L046;L047;L048;L049;L050;L051;L052;L053;L054",
+      "disputed_routes_included": false,
+      "pacific_map_ids_match_filter": true
+    },
+    {
+      "selection": "1946",
+      "visible_event_count": 4,
+      "visible_event_ids": "58;59;60;61",
+      "visible_route_count": 3,
+      "visible_route_ids": "L055;L056;L057",
+      "disputed_routes_included": false,
+      "pacific_map_ids_match_filter": true
+    }
+  ],
+  "external_layers": {
+    "openseamap": "HTTP 200 image/png for z=0/x=0/y=0; 334 bytes",
+    "gebco": "Capabilities HTTP 200; GEBCO_LATEST 128×128 GetMap HTTP 200 image/png",
+    "gmrt": "Both WMS capabilities returned HTTP 200; GridServer metadata returned JSON; 64-pixel ImageServer test returned image/jpeg",
+    "gmrt_cached_rasters": 0
+  },
+  "mine_schema": {
+    "tables": ["minefields", "minefield_boundaries", "mine_laying_events", "mine_sweeping_events", "minefield_status_events", "vessels", "units", "vessel_operation_links", "minefield_sources", "minefield_source_maps", "minefield_uncertainty"],
+    "canonical_minefields": 0,
+    "canonical_vessels": 0,
+    "vessel_operation_links": 0,
+    "validation_errors": 0
+  },
+  "raw_sha256": {
+    "Ryan-BookUSSTerror-1.pdf": "a3d68faa6ac331256ab3f6f5e1a1122d5b46f4a1b6fe8136a4392d64b515aedf",
+    "uss_terror_pacific_timeline_1943_1946.xlsx": "f6579acebd3292046087ad14396818141d10a34d8789b8ac4180573c06a789c4",
+    "uss_terror_route_legs_1943_1946.csv": "da3d5accd38c1724671667f1cf2305d654c32df8c568a70585cd2e59e6a985d7",
+    "uss_terror_timeline_1943_1946.csv": "b58dbcf3e2d4fc3f0d3ac71692a8df07fb49856e921ae9ae15a4abeedfc42435",
+    "uss_terror_timeline_and_route_1943_1946.geojson": "e487fd37e1aa777f1dad783a07b056018c0d7429d999a8fbcda085045504715c"
+  }
+}

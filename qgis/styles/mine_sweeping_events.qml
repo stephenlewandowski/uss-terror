@@ -1,0 +1,2 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.44.0" styleCategories="Symbology"><renderer-v2 type="singleSymbol"><symbols><symbol name="0" type="marker" alpha="0.9"><layer class="SimpleMarker"><Option type="Map"><Option name="name" value="diamond" type="QString"/><Option name="color" value="43,140,190,210" type="QString"/><Option name="outline_color" value="20,40,60,255" type="QString"/><Option name="size" value="4" type="QString"/></Option></layer></symbol></symbols></renderer-v2></qgis>

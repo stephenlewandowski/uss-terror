@@ -1,0 +1,6 @@
+conflict_id,record_type,record_id,issue_type,severity,details,resolution
+C0001,route_leg,L028,disputed_or_excluded_route,warning,Route is disputed or excluded from the default map.,Retained for archival or modeling review; no silent correction applied.
+C0002,route_leg,L023,implausible_speed,warning,Implied average speed 33.0 kn exceeds the 23.0 kn review threshold.,Retained for archival or modeling review; no silent correction applied.
+C0003,route_leg,L034,implausible_speed,warning,Implied average speed 23.4 kn exceeds the 23.0 kn review threshold.,Retained for archival or modeling review; no silent correction applied.
+C0004,route_leg,L035,implausible_speed,warning,Implied average speed 23.4 kn exceeds the 23.0 kn review threshold.,Retained for archival or modeling review; no silent correction applied.
+C0005,route_leg,L028,low_route_confidence,warning,Route confidence is low; retain for review and style as uncertain.,Retained for archival or modeling review; no silent correction applied.

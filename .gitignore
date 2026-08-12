@@ -1,0 +1,11 @@
+renv/library/
+renv/bootstrap-library/
+renv/staging/
+.Rproj.user/
+.Rhistory
+.RData
+outputs/screenshots/*.png
+outputs/backups/
+outputs/reports/*.log
+tmp/
+*.html
