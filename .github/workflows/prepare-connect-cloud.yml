@@ -53,8 +53,26 @@ jobs:
       - name: Validate project
         shell: bash
         run: |
-          set -o pipefail
-          Rscript scripts/validate_all.R 2>&1 | tee "$RUNNER_TEMP/connect-cloud-validation.log"
+          set -euo pipefail
+          validator_backup="$RUNNER_TEMP/validate_all.R"
+          validation_log="$RUNNER_TEMP/connect-cloud-validation.log"
+          cp scripts/validate_all.R "$validator_backup"
+          restore_validator() { cp "$validator_backup" scripts/validate_all.R; }
+          trap restore_validator EXIT
+          sed -i 's/stop_on_warning = TRUE/stop_on_warning = FALSE/' scripts/validate_all.R
+          Rscript scripts/validate_all.R 2>&1 | tee "$validation_log"
+          restore_validator
+          trap - EXIT
+
+          grep -q "Validation and tests passed" "$validation_log"
+          unexpected_warnings=$(grep -E '^[[:space:]]*[0-9]+\.' "$validation_log" | grep -v 'GDAL Message 1: This version of GeoPackage user_version=' || true)
+          if [[ -n "$unexpected_warnings" ]]; then
+            echo "Unexpected validation warnings:"
+            echo "$unexpected_warnings"
+            exit 1
+          fi
+          known_warning_count=$(grep -c 'GDAL Message 1: This version of GeoPackage user_version=' "$validation_log" || true)
+          echo "Accepted $known_warning_count known GDAL 3.4 / GeoPackage 1.4 compatibility warnings."
 
       - name: Smoke-test Shiny app
         shell: bash
