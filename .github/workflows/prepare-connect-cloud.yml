@@ -125,6 +125,13 @@ jobs:
             dependencyResolution = "library"
           )
 
+      - name: Upload generated manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: connect-cloud-manifest-candidate
+          path: manifest.json
+          if-no-files-found: error
+
       - name: Inspect manifest
         shell: Rscript {0}
         run: |
@@ -136,7 +143,7 @@ jobs:
             "plotly", "readr", "sf", "shiny", "terra", "yaml"
           )
           package_names <- names(manifest$packages)
-          stopifnot(identical(manifest$packages$terra$version, "1.8-86"))
+          stopifnot(identical(manifest$packages$terra$description$Version, "1.8-86"))
           missing_packages <- setdiff(required_packages, package_names)
           if (length(missing_packages)) {
             stop("Manifest is missing packages: ", paste(missing_packages, collapse = ", "))
