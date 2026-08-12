@@ -1,0 +1,3415 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.33,
+          36.946
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 1,
+        "date_start": "1943-10-02",
+        "date_end": "1943-10-02",
+        "location_id": "LOC001",
+        "location_name": "Norfolk / Hampton Roads",
+        "event_category": "Transit",
+        "event_action": "Departed Norfolk/Yorktown area for the Canal Zone and Pacific ports with Task Unit 29.2.5.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.5667,
+          8.95
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 2,
+        "date_start": "1943-10-08",
+        "date_end": "1943-10-10",
+        "location_id": "LOC002",
+        "location_name": "Panama Canal",
+        "event_category": "Transit",
+        "event_action": "Passed through the Panama Canal; exact anchorage and lock timing not reconstructed.",
+        "historical_confidence": "medium",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4783,
+          37.8199
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 3,
+        "date_start": "1943-10-19",
+        "date_end": "1943-10-19",
+        "location_id": "LOC003",
+        "location_name": "San Francisco Bay",
+        "event_category": "Port call",
+        "event_action": "Passed under the Golden Gate Bridge and anchored in San Francisco Bay.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 4,
+        "date_start": "1943-10-25",
+        "date_end": "1943-11-02",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Logistics",
+        "event_action": "Arrived Pearl Harbor, embarked mines and received routing for Funafuti.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          179.2,
+          -8.5167
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 5,
+        "date_start": "1943-11-09",
+        "date_end": "1943-11-28",
+        "location_id": "LOC007",
+        "location_name": "Funafuti",
+        "event_category": "Mine warfare support",
+        "event_action": "Supported survey and mining of Funafuti approaches; supplied water, provisions, repairs, and medical services; laid mooring buoys.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 12,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          179.2,
+          -8.5167
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 6,
+        "date_start": "1943-11-17",
+        "date_end": "1943-11-17",
+        "location_id": "LOC007",
+        "location_name": "Funafuti",
+        "event_category": "Air attack",
+        "event_action": "Gunners fired on enemy aircraft for the first time during a Japanese raid on the Funafuti runway.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 12,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 7,
+        "date_start": "1943-12-04",
+        "date_end": "1943-12-09",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Logistics",
+        "event_action": "Loaded mines and gear for Tarawa.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.93,
+          1.35
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 8,
+        "date_start": "1943-12-14",
+        "date_end": "1943-12-25",
+        "location_id": "LOC008",
+        "location_name": "Tarawa",
+        "event_category": "Mine warfare support",
+        "event_action": "Provided heavy equipment and mines to mine details at Tarawa amid recurring Japanese air activity.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.1833,
+          -15.5167
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 9,
+        "date_start": "1943-12-29",
+        "date_end": "1944-01-08",
+        "location_id": "LOC009",
+        "location_name": "Espiritu Santo",
+        "event_category": "Logistics",
+        "event_action": "Delivered mines and heavy equipment; New Year's Day 1944 was spent at Espiritu Santo.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          159.95,
+          -9.433
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 10,
+        "date_start": "1944-01-13",
+        "date_end": "1944-01-15",
+        "location_id": "LOC010",
+        "location_name": "Guadalcanal",
+        "event_category": "Logistics",
+        "event_action": "Delivered advance-base mine equipment at Guadalcanal.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.833,
+          3.167
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 11,
+        "date_start": "1944-01-18",
+        "date_end": "1944-01-28",
+        "location_id": "LOC011",
+        "location_name": "Makin",
+        "event_category": "Mine warfare",
+        "event_action": "Surveyed lagoon passes and prepared a self-propelled barge to mine channels.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 12,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.93,
+          1.35
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 12,
+        "date_start": "1944-01-29",
+        "date_end": "1944-01-31",
+        "location_id": "LOC008",
+        "location_name": "Tarawa",
+        "event_category": "Personnel/logistics",
+        "event_action": "Brief Tarawa stop to embark Mine Detail 19 before returning to Pearl Harbor.",
+        "historical_confidence": "medium",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": "Arrival date estimated from Makin departure on 28 Jan and departure for Pearl Harbor on 31 Jan."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 13,
+        "date_start": "1944-02-06",
+        "date_end": "1944-02-13",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Transport preparation",
+        "event_action": "Returned to Pearl Harbor and embarked passengers for San Francisco.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4783,
+          37.8199
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 14,
+        "date_start": "1944-02-18",
+        "date_end": "1944-02-21",
+        "location_id": "LOC003",
+        "location_name": "San Francisco Bay",
+        "event_category": "Passenger transport",
+        "event_action": "Three-day San Francisco stay after transporting more than 500 passengers.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 15,
+        "date_start": "1944-02-26",
+        "date_end": "1944-03-05",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Logistics",
+        "event_action": "Discharged passengers and prepared for Marshall Islands operations.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          171.3667,
+          7.1167
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 16,
+        "date_start": "1944-03-10",
+        "date_end": "1944-04-22",
+        "location_id": "LOC012",
+        "location_name": "Majuro",
+        "event_category": "Marshall Islands operations",
+        "event_action": "Majuro served as a recurring base for minelaying and logistics circuits to Kwajalein and Enewetak.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 12,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": "This interval is represented by separate route legs and repeated point events."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.7333,
+          8.7167
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 17,
+        "date_start": "1944-03-12",
+        "date_end": "1944-03-16",
+        "location_id": "LOC013",
+        "location_name": "Kwajalein",
+        "event_category": "Mine warfare/logistics",
+        "event_action": "First documented March circuit at Kwajalein.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.7333,
+          8.7167
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 18,
+        "date_start": "1944-03-27",
+        "date_end": "1944-04-05",
+        "location_id": "LOC013",
+        "location_name": "Kwajalein",
+        "event_category": "Mine warfare/logistics",
+        "event_action": "Second documented Majuro\u2013Kwajalein circuit.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          162.35,
+          11.35
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 19,
+        "date_start": "1944-04-14",
+        "date_end": "1944-04-22",
+        "location_id": "LOC014",
+        "location_name": "Enewetak",
+        "event_category": "Mine warfare/logistics",
+        "event_action": "Enewetak operations before return toward Hawaii.",
+        "historical_confidence": "medium",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": "War Cruise gives 17\u201320 Apr for Enewetak\u2013Pearl, but that duration is implausibly short and conflicts with DANFS departure on 22 Apr."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 20,
+        "date_start": "1944-04-29",
+        "date_end": "1944-05-24",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Repair/training/logistics",
+        "event_action": "Pearl Harbor repairs, mine loading, and gunnery exercises.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": "Arrival date estimated from normal transit after official 22 Apr departure from the Marshalls."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          171.3667,
+          7.1167
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 21,
+        "date_start": "1944-05-30",
+        "date_end": "1944-06-06",
+        "location_id": "LOC012",
+        "location_name": "Majuro",
+        "event_category": "Logistics",
+        "event_action": "Returned to Majuro as part of ammunition, mine, and bomb supply circuits.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 12,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.833,
+          3.167
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 22,
+        "date_start": "1944-06-07",
+        "date_end": "1944-06-17",
+        "location_id": "LOC011",
+        "location_name": "Makin",
+        "event_category": "Logistics",
+        "event_action": "Makin logistics stop during the summer supply circuit.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 12,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          162.35,
+          11.35
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 23,
+        "date_start": "1944-06-18",
+        "date_end": "1944-07-07",
+        "location_id": "LOC014",
+        "location_name": "Enewetak",
+        "event_category": "Logistics/casualty transport",
+        "event_action": "Enewetak logistics; later carried American casualties and Japanese prisoners toward Pearl Harbor.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 24,
+        "date_start": "1944-07-12",
+        "date_end": "1944-07-20",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Logistics",
+        "event_action": "Pearl Harbor turnaround before another Enewetak/Marianas circuit.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          162.35,
+          11.35
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 25,
+        "date_start": "1944-07-27",
+        "date_end": "1944-08-11",
+        "location_id": "LOC014",
+        "location_name": "Enewetak",
+        "event_category": "Logistics",
+        "event_action": "Enewetak-based segment supporting the Marshalls and Marianas.",
+        "historical_confidence": "medium",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": "War Cruise contains a likely erroneous pre-invasion 'Iwo Jima' entry for 1\u20134 Aug. The default map does not route Terror to Iwo Jima in 1944."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.65,
+          13.45
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 26,
+        "date_start": "1944-08-11",
+        "date_end": "1944-08-17",
+        "location_id": "LOC016",
+        "location_name": "Guam",
+        "event_category": "Marianas logistics",
+        "event_action": "Guam-area cargo operations during the Marianas campaign.",
+        "historical_confidence": "medium",
+        "include_default_map": true,
+        "uncertainty_nm": 8,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": "Exact inbound/outbound sequence is conflicted in the cruise-chart transcription."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 27,
+        "date_start": "1944-08-17",
+        "date_end": "1944-08-24",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Transit",
+        "event_action": "Departed Oahu for the west coast; arrived San Francisco on 24 August.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4783,
+          37.8199
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 28,
+        "date_start": "1944-08-24",
+        "date_end": "1944-09-09",
+        "location_id": "LOC003",
+        "location_name": "San Francisco Bay",
+        "event_category": "Dry dock/overhaul",
+        "event_action": "San Francisco drydocking and overhaul.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 29,
+        "date_start": "1944-09-14",
+        "date_end": "1944-09-21",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Logistics",
+        "event_action": "Loaded mines and minesweeping gear before western Pacific deployment.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.75,
+          15.2
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 30,
+        "date_start": "1944-09-30",
+        "date_end": "1944-10-03",
+        "location_id": "LOC015",
+        "location_name": "Saipan",
+        "event_category": "Marianas logistics",
+        "event_action": "Saipan stop before Ulithi defensive mining operations.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 12,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.12,
+          9.55
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 31,
+        "date_start": "1944-10-08",
+        "date_end": "1944-10-17",
+        "location_id": "LOC017",
+        "location_name": "Ulithi",
+        "event_category": "Defensive mining",
+        "event_action": "Began defensive mining operations at Ulithi.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.75,
+          15.2
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 32,
+        "date_start": "1944-10-19",
+        "date_end": "1944-11-02",
+        "location_id": "LOC015",
+        "location_name": "Saipan",
+        "event_category": "Logistics",
+        "event_action": "Repeated Saipan\u2013Ulithi cargo and support circuits.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 12,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.33,
+          -2.05
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 33,
+        "date_start": "1944-11-11",
+        "date_end": "1944-11-16",
+        "location_id": "LOC018",
+        "location_name": "Manus",
+        "event_category": "Admiralties logistics",
+        "event_action": "Cargo operations in the Admiralty Islands/Manus area.",
+        "historical_confidence": "medium",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": "The chart transcription contains an improbable pre-invasion Iwo Jima leg; Manus is retained as the confirmed destination."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 34,
+        "date_start": "1944-11-24",
+        "date_end": "1945-01-22",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Alteration/flagship preparation",
+        "event_action": "Pearl Harbor repairs and alterations to accommodate Commander, Mine Force, Pacific Fleet staff; assumed flagship duty 6 January 1945.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          162.35,
+          11.35
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 35,
+        "date_start": "1945-01-30",
+        "date_end": "1945-01-30",
+        "location_id": "LOC014",
+        "location_name": "Enewetak",
+        "event_category": "Transit/logistics",
+        "event_action": "Arrived Enewetak, fueled, and continued toward Ulithi.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.12,
+          9.55
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 36,
+        "date_start": "1945-02-03",
+        "date_end": "1945-02-08",
+        "location_id": "LOC017",
+        "location_name": "Ulithi",
+        "event_category": "Iwo Jima staging",
+        "event_action": "Supplied mines and gear to mine craft preparing for Iwo Jima.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.62,
+          14.97
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 37,
+        "date_start": "1945-02-10",
+        "date_end": "1945-02-13",
+        "location_id": "LOC019",
+        "location_name": "Tinian",
+        "event_category": "Iwo Jima staging",
+        "event_action": "Served as tender for mine craft at Tinian, the second staging area.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.34,
+          24.78
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 38,
+        "date_start": "1945-02-17",
+        "date_end": "1945-02-19",
+        "location_id": "LOC020",
+        "location_name": "Iwo Jima",
+        "event_category": "Iwo Jima operation",
+        "event_action": "Directed and supported minesweeping; fired 5-inch guns at shore positions; received casualties and damaged small craft.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 8,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.75,
+          15.2
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 39,
+        "date_start": "1945-02-21",
+        "date_end": "1945-02-21",
+        "location_id": "LOC015",
+        "location_name": "Saipan",
+        "event_category": "Casualty evacuation",
+        "event_action": "Transferred battle casualties to an Army hospital at Saipan.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 12,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.12,
+          9.55
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 40,
+        "date_start": "1945-02-23",
+        "date_end": "1945-03-19",
+        "location_id": "LOC017",
+        "location_name": "Ulithi",
+        "event_category": "Okinawa staging",
+        "event_action": "Serviced and supplied mine craft staging for the assault on Okinawa.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3,
+          26.1667
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 41,
+        "date_start": "1945-03-24",
+        "date_end": "1945-03-29",
+        "location_id": "LOC021",
+        "location_name": "Kerama Retto",
+        "event_category": "Okinawa operation",
+        "event_action": "Arrived off Kerama Retto on 24 March; anchored in the harbor on 29 March as flagship and tender.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3,
+          26.1667
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 42,
+        "date_start": "1945-04-02",
+        "date_end": "1945-04-02",
+        "location_id": "LOC021",
+        "location_name": "Kerama Retto",
+        "event_category": "Air attack",
+        "event_action": "Took two Japanese aircraft under fire during a harbor penetration; one aircraft splashed nearby.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3,
+          26.1667
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 43,
+        "date_start": "1945-04-06",
+        "date_end": "1945-04-06",
+        "location_id": "LOC021",
+        "location_name": "Kerama Retto",
+        "event_category": "Mass air attack/rescue",
+        "event_action": "Fought a four-hour mass air attack; helped down two aircraft and aided survivors of LST-447 and SS Logan Victory.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3,
+          26.1667
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 44,
+        "date_start": "1945-04-28",
+        "date_end": "1945-04-28",
+        "location_id": "LOC021",
+        "location_name": "Kerama Retto",
+        "event_category": "Rescue/medical",
+        "event_action": "Fired on aircraft attacking nearby Pinckney, sent boats, and treated casualties.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3,
+          26.1667
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 45,
+        "date_start": "1945-05-01",
+        "date_end": "1945-05-01",
+        "location_id": "LOC021",
+        "location_name": "Kerama Retto",
+        "event_category": "Kamikaze strike",
+        "event_action": "Kamikaze and bombs struck the ship shortly before 0400; 41 dead, 7 missing, and 123 wounded.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 3,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3,
+          26.1667
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 46,
+        "date_start": "1945-05-02",
+        "date_end": "1945-05-08",
+        "location_id": "LOC021",
+        "location_name": "Kerama Retto",
+        "event_category": "Emergency repair",
+        "event_action": "Moored to Natrona for emergency repairs; flag staff transferred before withdrawal.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.75,
+          15.2
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 47,
+        "date_start": "1945-05-12",
+        "date_end": "1945-05-15",
+        "location_id": "LOC015",
+        "location_name": "Saipan",
+        "event_category": "Damage assessment",
+        "event_action": "Reached Saipan after withdrawal from Kerama Retto; forward-area repair judged inadequate.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 12,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          162.35,
+          11.35
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 48,
+        "date_start": "1945-05-18",
+        "date_end": "1945-05-19",
+        "location_id": "LOC014",
+        "location_name": "Enewetak",
+        "event_category": "Withdrawal route",
+        "event_action": "Estimated Enewetak stop on the documented Saipan\u2013Enewetak\u2013Pearl Harbor withdrawal route.",
+        "historical_confidence": "medium",
+        "include_default_map": true,
+        "uncertainty_nm": 15,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": "Intermediate dates are estimated; DANFS confirms the route but not the dates."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 49,
+        "date_start": "1945-05-23",
+        "date_end": "1945-05-26",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Transit/repair",
+        "event_action": "Arrived Pearl Harbor with visible kamikaze damage; departed for San Francisco after brief support.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S4",
+        "source_url": "https://www.navsource.net/archives/11/0605.htm",
+        "notes": "Capt. Blakeslee chart gives a later Pearl Harbor interval; NavSource photographic dating is used for mapping."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4783,
+          37.8199
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 50,
+        "date_start": "1945-06-01",
+        "date_end": "1945-06-14",
+        "location_id": "LOC003",
+        "location_name": "San Francisco Bay",
+        "event_category": "Return for overhaul",
+        "event_action": "Reached San Francisco, unloaded ammunition, and prepared for shipyard overhaul.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.273,
+          38.1
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 51,
+        "date_start": "1945-06-14",
+        "date_end": "1945-08-14",
+        "location_id": "LOC004",
+        "location_name": "Mare Island Navy Yard",
+        "event_category": "Battle-damage repair/refit",
+        "event_action": "Mare Island overhaul repaired kamikaze damage and strengthened antiaircraft armament.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 3,
+        "source_id": "S4",
+        "source_url": "https://www.navsource.net/archives/11/0605.htm",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4783,
+          37.8199
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 52,
+        "date_start": "1945-08-15",
+        "date_end": "1945-08-15",
+        "location_id": "LOC003",
+        "location_name": "San Francisco Bay",
+        "event_category": "Return to western Pacific",
+        "event_action": "Departed San Francisco Bay on the day Japan announced surrender, bound west via Hawaii and Saipan.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.88,
+          26.22
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 53,
+        "date_start": "1945-09-08",
+        "date_end": "1945-09-09",
+        "location_id": "LOC022",
+        "location_name": "Buckner Bay",
+        "event_category": "Occupation mine warfare",
+        "event_action": "Reached Buckner Bay; Rear Admiral Arthur D. Struble established his headquarters aboard on 9 September.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S3",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/USSTerror-AnAlbum-Ryan.pdf",
+        "notes": "DANFS states the ship was moored in Buckner Bay on 16 Sep; the Album gives arrival on 8 Sep."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.88,
+          26.22
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 54,
+        "date_start": "1945-09-16",
+        "date_end": "1945-09-16",
+        "location_id": "LOC022",
+        "location_name": "Buckner Bay",
+        "event_category": "Typhoon/collision",
+        "event_action": "Rode out a severe typhoon; Patoka collided with Terror, causing moderate hull damage.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.88,
+          26.22
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 55,
+        "date_start": "1945-10-09",
+        "date_end": "1945-10-10",
+        "location_id": "LOC022",
+        "location_name": "Buckner Bay",
+        "event_category": "Typhoon/rescue",
+        "event_action": "Survived a second severe typhoon and cared for hundreds of survivors from damaged, beached, or sunk mine-force vessels.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 10,
+        "source_id": "S3",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/USSTerror-AnAlbum-Ryan.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.72,
+          33.16
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 56,
+        "date_start": "1945-10-22",
+        "date_end": "1945-11-20",
+        "location_id": "LOC023",
+        "location_name": "Sasebo",
+        "event_category": "Occupation mine warfare",
+        "event_action": "Served at Sasebo as Mine Force flagship/tender, supplying water, fuel, gear, and medical support to minesweepers.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S5",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.72,
+          33.16
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 57,
+        "date_start": "1945-11-17",
+        "date_end": "1945-11-20",
+        "location_id": "LOC023",
+        "location_name": "Sasebo",
+        "event_category": "Command transition",
+        "event_action": "Panamint came alongside for transfer of staff and equipment; Terror departed Sasebo for Pearl Harbor on 20 November.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S5",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 58,
+        "date_start": "1945-12-07",
+        "date_end": "1946-02-21",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Typhoon-damage repair",
+        "event_action": "Entered Pearl Harbor Navy Yard drydock and underwent repairs through February 1946.",
+        "historical_confidence": "high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S5",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.37,
+          37.823
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 59,
+        "date_start": "1946-02-27",
+        "date_end": "1946-03-06",
+        "location_id": "LOC005",
+        "location_name": "Treasure Island",
+        "event_category": "Postwar transport/base",
+        "event_action": "Arrived in San Francisco Bay/Treasure Island after departing Pearl Harbor on 21 February.",
+        "historical_confidence": "medium",
+        "include_default_map": true,
+        "uncertainty_nm": 3,
+        "source_id": "S3",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/USSTerror-AnAlbum-Ryan.pdf",
+        "notes": "Exact February arrival date is not stated; 27 Feb is a modeling estimate."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.975,
+          21.344
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 60,
+        "date_start": "1946-03-12",
+        "date_end": "1946-03-25",
+        "location_id": "LOC006",
+        "location_name": "Pearl Harbor",
+        "event_category": "Command transition",
+        "event_action": "Returned to Pearl Harbor; Commander Mine Force, Pacific Fleet flag shifted aboard before return to San Francisco.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 5,
+        "source_id": "S5",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": "Compiled volume contains minor date discrepancies; detailed chronology gives 6\u201312 Mar outbound and 25 Mar departure."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.37,
+          37.823
+        ]
+      },
+      "properties": {
+        "feature_type": "timeline_event",
+        "sequence": 61,
+        "date_start": "1946-04-01",
+        "date_end": "1946-12-25",
+        "location_id": "LOC005",
+        "location_name": "Treasure Island",
+        "event_category": "Postwar service",
+        "event_action": "Operated from Treasure Island as Mine Force Pacific flagship until the force was dissolved on 25 December 1946.",
+        "historical_confidence": "medium-high",
+        "include_default_map": true,
+        "uncertainty_nm": 3,
+        "source_id": "S5",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -76.33,
+            36.946
+          ],
+          [
+            -79.5667,
+            8.95
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L001",
+        "sequence": 1,
+        "start_date": "1943-10-02",
+        "end_date": "1943-10-08",
+        "start_location": "Norfolk / Hampton Roads",
+        "end_location": "Panama Canal",
+        "great_circle_nm": 1690.1,
+        "implied_avg_speed_kn": 11.7,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -79.5667,
+            8.95
+          ],
+          [
+            -122.4783,
+            37.8199
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L002",
+        "sequence": 2,
+        "start_date": "1943-10-10",
+        "end_date": "1943-10-19",
+        "start_location": "Panama Canal",
+        "end_location": "San Francisco Bay",
+        "great_circle_nm": 2892.2,
+        "implied_avg_speed_kn": 13.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.4783,
+            37.8199
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L003",
+        "sequence": 3,
+        "start_date": "1943-10-19",
+        "end_date": "1943-10-25",
+        "start_location": "San Francisco Bay",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 2083.1,
+        "implied_avg_speed_kn": 14.5,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            179.2,
+            -8.5167
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L004",
+        "sequence": 4,
+        "start_date": "1943-11-02",
+        "end_date": "1943-11-09",
+        "start_location": "Pearl Harbor",
+        "end_location": "Funafuti",
+        "great_circle_nm": 2241.6,
+        "implied_avg_speed_kn": 13.3,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            179.2,
+            -8.5167
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L005",
+        "sequence": 5,
+        "start_date": "1943-11-28",
+        "end_date": "1943-12-04",
+        "start_location": "Funafuti",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 2241.6,
+        "implied_avg_speed_kn": 15.6,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            172.93,
+            1.35
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L006",
+        "sequence": 6,
+        "start_date": "1943-12-09",
+        "end_date": "1943-12-14",
+        "start_location": "Pearl Harbor",
+        "end_location": "Tarawa",
+        "great_circle_nm": 2082.9,
+        "implied_avg_speed_kn": 17.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            172.93,
+            1.35
+          ],
+          [
+            167.1833,
+            -15.5167
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L007",
+        "sequence": 7,
+        "start_date": "1943-12-25",
+        "end_date": "1943-12-29",
+        "start_location": "Tarawa",
+        "end_location": "Espiritu Santo",
+        "great_circle_nm": 1068.6,
+        "implied_avg_speed_kn": 11.1,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            167.1833,
+            -15.5167
+          ],
+          [
+            159.95,
+            -9.433
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L008",
+        "sequence": 8,
+        "start_date": "1944-01-08",
+        "end_date": "1944-01-13",
+        "start_location": "Espiritu Santo",
+        "end_location": "Guadalcanal",
+        "great_circle_nm": 559.5,
+        "implied_avg_speed_kn": 4.7,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            159.95,
+            -9.433
+          ],
+          [
+            172.833,
+            3.167
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L009",
+        "sequence": 9,
+        "start_date": "1944-01-15",
+        "end_date": "1944-01-18",
+        "start_location": "Guadalcanal",
+        "end_location": "Makin",
+        "great_circle_nm": 1080.0,
+        "implied_avg_speed_kn": 15.0,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            172.833,
+            3.167
+          ],
+          [
+            172.93,
+            1.35
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L010",
+        "sequence": 10,
+        "start_date": "1944-01-28",
+        "end_date": "1944-01-29",
+        "start_location": "Makin",
+        "end_location": "Tarawa",
+        "great_circle_nm": 109.2,
+        "implied_avg_speed_kn": 4.6,
+        "route_confidence": "medium",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": "Brief Tarawa stop is omitted from Blakeslee's leg table."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            172.93,
+            1.35
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L011",
+        "sequence": 11,
+        "start_date": "1944-01-31",
+        "end_date": "1944-02-06",
+        "start_location": "Tarawa",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 2082.9,
+        "implied_avg_speed_kn": 14.5,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            -122.4783,
+            37.8199
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L012",
+        "sequence": 12,
+        "start_date": "1944-02-13",
+        "end_date": "1944-02-18",
+        "start_location": "Pearl Harbor",
+        "end_location": "San Francisco Bay",
+        "great_circle_nm": 2083.1,
+        "implied_avg_speed_kn": 17.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.4783,
+            37.8199
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L013",
+        "sequence": 13,
+        "start_date": "1944-02-21",
+        "end_date": "1944-02-26",
+        "start_location": "San Francisco Bay",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 2083.1,
+        "implied_avg_speed_kn": 17.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            171.3667,
+            7.1167
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L014",
+        "sequence": 14,
+        "start_date": "1944-03-05",
+        "end_date": "1944-03-10",
+        "start_location": "Pearl Harbor",
+        "end_location": "Majuro",
+        "great_circle_nm": 1972.0,
+        "implied_avg_speed_kn": 16.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            171.3667,
+            7.1167
+          ],
+          [
+            167.7333,
+            8.7167
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L015",
+        "sequence": 15,
+        "start_date": "1944-03-10",
+        "end_date": "1944-03-12",
+        "start_location": "Majuro",
+        "end_location": "Kwajalein",
+        "great_circle_nm": 236.5,
+        "implied_avg_speed_kn": 4.9,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            167.7333,
+            8.7167
+          ],
+          [
+            171.3667,
+            7.1167
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L016",
+        "sequence": 16,
+        "start_date": "1944-03-16",
+        "end_date": "1944-03-17",
+        "start_location": "Kwajalein",
+        "end_location": "Majuro",
+        "great_circle_nm": 236.5,
+        "implied_avg_speed_kn": 9.9,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            171.3667,
+            7.1167
+          ],
+          [
+            167.7333,
+            8.7167
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L017",
+        "sequence": 17,
+        "start_date": "1944-03-26",
+        "end_date": "1944-03-27",
+        "start_location": "Majuro",
+        "end_location": "Kwajalein",
+        "great_circle_nm": 236.5,
+        "implied_avg_speed_kn": 9.9,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            167.7333,
+            8.7167
+          ],
+          [
+            171.3667,
+            7.1167
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L018",
+        "sequence": 18,
+        "start_date": "1944-04-05",
+        "end_date": "1944-04-06",
+        "start_location": "Kwajalein",
+        "end_location": "Majuro",
+        "great_circle_nm": 236.5,
+        "implied_avg_speed_kn": 9.9,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            171.3667,
+            7.1167
+          ],
+          [
+            162.35,
+            11.35
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L019",
+        "sequence": 19,
+        "start_date": "1944-04-12",
+        "end_date": "1944-04-14",
+        "start_location": "Majuro",
+        "end_location": "Enewetak",
+        "great_circle_nm": 591.6,
+        "implied_avg_speed_kn": 12.3,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            162.35,
+            11.35
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L020",
+        "sequence": 20,
+        "start_date": "1944-04-22",
+        "end_date": "1944-04-29",
+        "start_location": "Enewetak",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 2356.0,
+        "implied_avg_speed_kn": 14.0,
+        "route_confidence": "medium-high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": "Blakeslee chart gives 17\u201320 Apr, an implausibly fast leg that conflicts with DANFS."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            171.3667,
+            7.1167
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L021",
+        "sequence": 21,
+        "start_date": "1944-05-24",
+        "end_date": "1944-05-30",
+        "start_location": "Pearl Harbor",
+        "end_location": "Majuro",
+        "great_circle_nm": 1972.0,
+        "implied_avg_speed_kn": 13.7,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            171.3667,
+            7.1167
+          ],
+          [
+            172.833,
+            3.167
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L022",
+        "sequence": 22,
+        "start_date": "1944-06-06",
+        "end_date": "1944-06-07",
+        "start_location": "Majuro",
+        "end_location": "Makin",
+        "great_circle_nm": 252.8,
+        "implied_avg_speed_kn": 10.5,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            172.833,
+            3.167
+          ],
+          [
+            162.35,
+            11.35
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L023",
+        "sequence": 23,
+        "start_date": "1944-06-17",
+        "end_date": "1944-06-18",
+        "start_location": "Makin",
+        "end_location": "Enewetak",
+        "great_circle_nm": 794.0,
+        "implied_avg_speed_kn": 33.1,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            162.35,
+            11.35
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L024",
+        "sequence": 24,
+        "start_date": "1944-07-07",
+        "end_date": "1944-07-12",
+        "start_location": "Enewetak",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 2356.0,
+        "implied_avg_speed_kn": 19.6,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            162.35,
+            11.35
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L025",
+        "sequence": 25,
+        "start_date": "1944-07-20",
+        "end_date": "1944-07-27",
+        "start_location": "Pearl Harbor",
+        "end_location": "Enewetak",
+        "great_circle_nm": 2356.0,
+        "implied_avg_speed_kn": 14.0,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            162.35,
+            11.35
+          ],
+          [
+            145.75,
+            15.2
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L026",
+        "sequence": 26,
+        "start_date": "1944-07-30",
+        "end_date": "1944-08-01",
+        "start_location": "Enewetak",
+        "end_location": "Saipan",
+        "great_circle_nm": 996.8,
+        "implied_avg_speed_kn": 20.8,
+        "route_confidence": "medium",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": "Chart transcription says Iwo Jima, which is operationally implausible in Aug 1944; Saipan/Marianas is used as the probable destination."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            145.75,
+            15.2
+          ],
+          [
+            162.35,
+            11.35
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L027",
+        "sequence": 27,
+        "start_date": "1944-08-04",
+        "end_date": "1944-08-07",
+        "start_location": "Saipan",
+        "end_location": "Enewetak",
+        "great_circle_nm": 996.8,
+        "implied_avg_speed_kn": 13.8,
+        "route_confidence": "medium",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": "Reverse leg inferred from the same likely mis-transcribed chart entry."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            162.35,
+            11.35
+          ],
+          [
+            144.65,
+            13.45
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L028",
+        "sequence": 28,
+        "start_date": "1944-08-11",
+        "end_date": "1944-08-17",
+        "start_location": "Enewetak",
+        "end_location": "Guam",
+        "great_circle_nm": 1045.3,
+        "implied_avg_speed_kn": 7.3,
+        "route_confidence": "low",
+        "include_default_map": false,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": "Conflicts with official narrative that Terror departed Oahu on 17 Aug; retained for research but excluded from default route."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            -122.4783,
+            37.8199
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L029",
+        "sequence": 29,
+        "start_date": "1944-08-17",
+        "end_date": "1944-08-24",
+        "start_location": "Pearl Harbor",
+        "end_location": "San Francisco Bay",
+        "great_circle_nm": 2083.1,
+        "implied_avg_speed_kn": 12.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.4783,
+            37.8199
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L030",
+        "sequence": 30,
+        "start_date": "1944-09-09",
+        "end_date": "1944-09-14",
+        "start_location": "San Francisco Bay",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 2083.1,
+        "implied_avg_speed_kn": 17.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            145.75,
+            15.2
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L031",
+        "sequence": 31,
+        "start_date": "1944-09-21",
+        "end_date": "1944-09-30",
+        "start_location": "Pearl Harbor",
+        "end_location": "Saipan",
+        "great_circle_nm": 3213.7,
+        "implied_avg_speed_kn": 14.9,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            145.75,
+            15.2
+          ],
+          [
+            138.12,
+            9.55
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L032",
+        "sequence": 32,
+        "start_date": "1944-10-03",
+        "end_date": "1944-10-08",
+        "start_location": "Saipan",
+        "end_location": "Ulithi",
+        "great_circle_nm": 561.3,
+        "implied_avg_speed_kn": 4.7,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            138.12,
+            9.55
+          ],
+          [
+            145.75,
+            15.2
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L033",
+        "sequence": 33,
+        "start_date": "1944-10-17",
+        "end_date": "1944-10-19",
+        "start_location": "Ulithi",
+        "end_location": "Saipan",
+        "great_circle_nm": 561.3,
+        "implied_avg_speed_kn": 11.7,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            145.75,
+            15.2
+          ],
+          [
+            138.12,
+            9.55
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L034",
+        "sequence": 34,
+        "start_date": "1944-10-22",
+        "end_date": "1944-10-23",
+        "start_location": "Saipan",
+        "end_location": "Ulithi",
+        "great_circle_nm": 561.3,
+        "implied_avg_speed_kn": 23.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            138.12,
+            9.55
+          ],
+          [
+            145.75,
+            15.2
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L035",
+        "sequence": 35,
+        "start_date": "1944-11-01",
+        "end_date": "1944-11-02",
+        "start_location": "Ulithi",
+        "end_location": "Saipan",
+        "great_circle_nm": 561.3,
+        "implied_avg_speed_kn": 23.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            145.75,
+            15.2
+          ],
+          [
+            147.33,
+            -2.05
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L036",
+        "sequence": 36,
+        "start_date": "1944-11-04",
+        "end_date": "1944-11-11",
+        "start_location": "Saipan",
+        "end_location": "Manus",
+        "great_circle_nm": 1039.9,
+        "implied_avg_speed_kn": 6.2,
+        "route_confidence": "medium",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": "Chart transcription includes an improbable Iwo Jima intermediate; official Marianas\u2013Admiralties sequence is used."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            147.33,
+            -2.05
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L037",
+        "sequence": 37,
+        "start_date": "1944-11-16",
+        "end_date": "1944-11-24",
+        "start_location": "Manus",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 3502.6,
+        "implied_avg_speed_kn": 18.2,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            162.35,
+            11.35
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L038",
+        "sequence": 38,
+        "start_date": "1945-01-22",
+        "end_date": "1945-01-30",
+        "start_location": "Pearl Harbor",
+        "end_location": "Enewetak",
+        "great_circle_nm": 2356.0,
+        "implied_avg_speed_kn": 12.3,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            162.35,
+            11.35
+          ],
+          [
+            138.12,
+            9.55
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L039",
+        "sequence": 39,
+        "start_date": "1945-01-30",
+        "end_date": "1945-02-03",
+        "start_location": "Enewetak",
+        "end_location": "Ulithi",
+        "great_circle_nm": 1434.3,
+        "implied_avg_speed_kn": 14.9,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": "Printed reduction appears to read Okinawa; official narrative and deck log establish Enewetak."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            138.12,
+            9.55
+          ],
+          [
+            145.62,
+            14.97
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L040",
+        "sequence": 40,
+        "start_date": "1945-02-08",
+        "end_date": "1945-02-10",
+        "start_location": "Ulithi",
+        "end_location": "Tinian",
+        "great_circle_nm": 547.1,
+        "implied_avg_speed_kn": 11.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            145.62,
+            14.97
+          ],
+          [
+            141.34,
+            24.78
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L041",
+        "sequence": 41,
+        "start_date": "1945-02-13",
+        "end_date": "1945-02-17",
+        "start_location": "Tinian",
+        "end_location": "Iwo Jima",
+        "great_circle_nm": 636.5,
+        "implied_avg_speed_kn": 6.6,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            141.34,
+            24.78
+          ],
+          [
+            145.75,
+            15.2
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L042",
+        "sequence": 42,
+        "start_date": "1945-02-19",
+        "end_date": "1945-02-21",
+        "start_location": "Iwo Jima",
+        "end_location": "Saipan",
+        "great_circle_nm": 626.5,
+        "implied_avg_speed_kn": 13.1,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            145.75,
+            15.2
+          ],
+          [
+            138.12,
+            9.55
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L043",
+        "sequence": 43,
+        "start_date": "1945-02-21",
+        "end_date": "1945-02-23",
+        "start_location": "Saipan",
+        "end_location": "Ulithi",
+        "great_circle_nm": 561.3,
+        "implied_avg_speed_kn": 11.7,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            138.12,
+            9.55
+          ],
+          [
+            127.3,
+            26.1667
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L044",
+        "sequence": 44,
+        "start_date": "1945-03-19",
+        "end_date": "1945-03-24",
+        "start_location": "Ulithi",
+        "end_location": "Kerama Retto",
+        "great_circle_nm": 1172.2,
+        "implied_avg_speed_kn": 9.8,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.3,
+            26.1667
+          ],
+          [
+            145.75,
+            15.2
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L045",
+        "sequence": 45,
+        "start_date": "1945-05-08",
+        "end_date": "1945-05-12",
+        "start_location": "Kerama Retto",
+        "end_location": "Saipan",
+        "great_circle_nm": 1225.4,
+        "implied_avg_speed_kn": 12.8,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S2",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            145.75,
+            15.2
+          ],
+          [
+            162.35,
+            11.35
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L046",
+        "sequence": 46,
+        "start_date": "1945-05-15",
+        "end_date": "1945-05-18",
+        "start_location": "Saipan",
+        "end_location": "Enewetak",
+        "great_circle_nm": 996.8,
+        "implied_avg_speed_kn": 13.8,
+        "route_confidence": "medium-high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            162.35,
+            11.35
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L047",
+        "sequence": 47,
+        "start_date": "1945-05-18",
+        "end_date": "1945-05-23",
+        "start_location": "Enewetak",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 2356.0,
+        "implied_avg_speed_kn": 19.6,
+        "route_confidence": "medium-high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            -122.4783,
+            37.8199
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L048",
+        "sequence": 48,
+        "start_date": "1945-05-26",
+        "end_date": "1945-06-01",
+        "start_location": "Pearl Harbor",
+        "end_location": "San Francisco Bay",
+        "great_circle_nm": 2083.1,
+        "implied_avg_speed_kn": 14.5,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S4",
+        "source_url": "https://www.navsource.net/archives/11/0605.htm",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.4783,
+            37.8199
+          ],
+          [
+            -122.273,
+            38.1
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L049",
+        "sequence": 49,
+        "start_date": "1945-06-14",
+        "end_date": "1945-08-14",
+        "start_location": "San Francisco Bay",
+        "end_location": "Mare Island Navy Yard",
+        "great_circle_nm": 19.4,
+        "implied_avg_speed_kn": 0.0,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S4",
+        "source_url": "https://www.navsource.net/archives/11/0605.htm",
+        "notes": "Not a sea transit leg; identifies repair location."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.4783,
+            37.8199
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L050",
+        "sequence": 50,
+        "start_date": "1945-08-15",
+        "end_date": "1945-08-21",
+        "start_location": "San Francisco Bay",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 2083.1,
+        "implied_avg_speed_kn": 14.5,
+        "route_confidence": "medium-high",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            145.75,
+            15.2
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L051",
+        "sequence": 51,
+        "start_date": "1945-08-22",
+        "end_date": "1945-09-01",
+        "start_location": "Pearl Harbor",
+        "end_location": "Saipan",
+        "great_circle_nm": 3213.7,
+        "implied_avg_speed_kn": 13.4,
+        "route_confidence": "medium",
+        "include_default_map": true,
+        "source_id": "S1",
+        "source_url": "https://www.history.navy.mil/research/histories/ship-histories/danfs/t/terror-iii.html",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            145.75,
+            15.2
+          ],
+          [
+            127.88,
+            26.22
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L052",
+        "sequence": 52,
+        "start_date": "1945-09-02",
+        "end_date": "1945-09-08",
+        "start_location": "Saipan",
+        "end_location": "Buckner Bay",
+        "great_circle_nm": 1199.8,
+        "implied_avg_speed_kn": 8.3,
+        "route_confidence": "medium",
+        "include_default_map": true,
+        "source_id": "S3",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/USSTerror-AnAlbum-Ryan.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            127.88,
+            26.22
+          ],
+          [
+            129.72,
+            33.16
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L053",
+        "sequence": 53,
+        "start_date": "1945-10-20",
+        "end_date": "1945-10-22",
+        "start_location": "Buckner Bay",
+        "end_location": "Sasebo",
+        "great_circle_nm": 427.6,
+        "implied_avg_speed_kn": 8.9,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S5",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            129.72,
+            33.16
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L054",
+        "sequence": 54,
+        "start_date": "1945-11-20",
+        "end_date": "1945-12-07",
+        "start_location": "Sasebo",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 3851.4,
+        "implied_avg_speed_kn": 9.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S5",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            -122.37,
+            37.823
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L055",
+        "sequence": 55,
+        "start_date": "1946-02-21",
+        "end_date": "1946-02-27",
+        "start_location": "Pearl Harbor",
+        "end_location": "Treasure Island",
+        "great_circle_nm": 2088.0,
+        "implied_avg_speed_kn": 14.5,
+        "route_confidence": "medium-high",
+        "include_default_map": true,
+        "source_id": "S3",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/USSTerror-AnAlbum-Ryan.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -122.37,
+            37.823
+          ],
+          [
+            -157.975,
+            21.344
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L056",
+        "sequence": 56,
+        "start_date": "1946-03-06",
+        "end_date": "1946-03-12",
+        "start_location": "Treasure Island",
+        "end_location": "Pearl Harbor",
+        "great_circle_nm": 2088.0,
+        "implied_avg_speed_kn": 14.5,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S5",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -157.975,
+            21.344
+          ],
+          [
+            -122.37,
+            37.823
+          ]
+        ]
+      },
+      "properties": {
+        "feature_type": "route_leg",
+        "leg_id": "L057",
+        "sequence": 57,
+        "start_date": "1946-03-25",
+        "end_date": "1946-04-01",
+        "start_location": "Pearl Harbor",
+        "end_location": "Treasure Island",
+        "great_circle_nm": 2088.0,
+        "implied_avg_speed_kn": 12.4,
+        "route_confidence": "high",
+        "include_default_map": true,
+        "source_id": "S5",
+        "source_url": "https://terror.ringleib.com/wp-content/uploads/2021/03/Ryan-BookUSSTerror-1.pdf",
+        "notes": ""
+      }
+    }
+  ]
+}
