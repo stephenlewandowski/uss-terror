@@ -35,6 +35,152 @@ jobs:
           r-version: "4.6.0"
           use-public-rspm: true
 
+      - name: Pin terra for Ubuntu 22.04
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp DESCRIPTION "$RUNNER_TEMP/DESCRIPTION"
+          sed -i 's/^    terra,$/    terra (== 1.8-86),/' DESCRIPTION
+          grep -q '^    terra (== 1.8-86),
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: |
+            any::rsconnect
+          needs: check
+
+      - name: Restore project metadata
+        shell: bash
+        run: |
+          cp "$RUNNER_TEMP/DESCRIPTION" DESCRIPTION
+          git diff --exit-code -- DESCRIPTION
+
+      - name: Confirm R version
+        shell: Rscript {0}
+        run: |
+          version <- as.character(getRversion())
+          message("Running R ", version)
+          stopifnot(identical(version, "4.6.0"))
+          stopifnot(identical(as.character(utils::packageVersion("terra")), "1.8.86"))
+
+      - name: Validate project
+        shell: bash
+        run: |
+          set -euo pipefail
+          validator_backup="$RUNNER_TEMP/validate_all.R"
+          validation_log="$RUNNER_TEMP/connect-cloud-validation.log"
+          cp scripts/validate_all.R "$validator_backup"
+          restore_validator() { cp "$validator_backup" scripts/validate_all.R; }
+          trap restore_validator EXIT
+          sed -i 's/stop_on_warning = TRUE/stop_on_warning = FALSE/' scripts/validate_all.R
+          Rscript scripts/validate_all.R 2>&1 | tee "$validation_log"
+          restore_validator
+          trap - EXIT
+
+          grep -q "Validation and tests passed" "$validation_log"
+          unexpected_warnings=$(grep -E '^[[:space:]]*[0-9]+\.' "$validation_log" | grep -v 'GDAL Message 1: This version of GeoPackage user_version=' || true)
+          if [[ -n "$unexpected_warnings" ]]; then
+            echo "Unexpected validation warnings:"
+            echo "$unexpected_warnings"
+            exit 1
+          fi
+          known_warning_count=$(grep -c 'GDAL Message 1: This version of GeoPackage user_version=' "$validation_log" || true)
+          echo "Accepted $known_warning_count known GDAL 3.4 / GeoPackage 1.4 compatibility warnings."
+
+      - name: Smoke-test Shiny app
+        shell: bash
+        run: |
+          set -euo pipefail
+          Rscript -e 'shiny::runApp(".", host = "127.0.0.1", port = 3838, launch.browser = FALSE)' >"$RUNNER_TEMP/shiny-startup.log" 2>&1 &
+          app_pid=$!
+          trap 'kill "$app_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 90); do
+            if curl --fail --silent --show-error http://127.0.0.1:3838/ >"$RUNNER_TEMP/shiny-home.html"; then
+              break
+            fi
+            if ! kill -0 "$app_pid" 2>/dev/null; then
+              cat "$RUNNER_TEMP/shiny-startup.log"
+              exit 1
+            fi
+            sleep 1
+          done
+          test -s "$RUNNER_TEMP/shiny-home.html"
+          grep -qi "USS Terror" "$RUNNER_TEMP/shiny-home.html"
+          kill "$app_pid"
+          wait "$app_pid" || true
+          trap - EXIT
+
+      - name: Generate manifest
+        shell: Rscript {0}
+        run: |
+          unlink(".github", recursive = TRUE, force = TRUE)
+          rsconnect::writeManifest(appDir = ".", appPrimaryDoc = "app.R")
+
+      - name: Inspect manifest
+        shell: Rscript {0}
+        run: |
+          manifest <- jsonlite::read_json("manifest.json", simplifyVector = FALSE)
+          stopifnot(identical(manifest$platform, "4.6.0"))
+
+          required_packages <- c(
+            "bslib", "dplyr", "DT", "htmltools", "leaflet",
+            "plotly", "readr", "sf", "shiny", "terra", "yaml"
+          )
+          package_names <- names(manifest$packages)
+          stopifnot(identical(manifest$packages$terra$version, "1.8-86"))
+          missing_packages <- setdiff(required_packages, package_names)
+          if (length(missing_packages)) {
+            stop("Manifest is missing packages: ", paste(missing_packages, collapse = ", "))
+          }
+
+          required_files <- c(
+            "app.R",
+            ".Rprofile",
+            "qgis/uss_terror_layers.gpkg"
+          )
+          file_names <- names(manifest$files)
+          missing_files <- setdiff(required_files, file_names)
+          if (length(missing_files)) {
+            stop("Manifest is missing files: ", paste(missing_files, collapse = ", "))
+          }
+          if (any(startsWith(file_names, ".github/"))) {
+            stop("Temporary GitHub Actions files must not be deployed")
+          }
+
+          summary_lines <- c(
+            paste("R version:", manifest$platform),
+            paste("Packages:", length(package_names)),
+            paste("Files:", length(file_names)),
+            paste("Primary file:", manifest$metadata$appPrimaryDoc)
+          )
+          writeLines(summary_lines, file.path(Sys.getenv("RUNNER_TEMP"), "connect-cloud-manifest-summary.txt"))
+          writeLines(summary_lines)
+
+      - name: Upload validation evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: connect-cloud-validation
+          path: |
+            manifest.json
+            ${{ runner.temp }}/connect-cloud-validation.log
+            ${{ runner.temp }}/connect-cloud-manifest-summary.txt
+            ${{ runner.temp }}/shiny-startup.log
+          if-no-files-found: error
+
+      - name: Commit manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add manifest.json
+          if git diff --cached --quiet; then
+            echo "manifest.json is already current"
+            exit 0
+          fi
+          git commit -m "Add Connect Cloud deployment manifest"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+ DESCRIPTION
+
       - name: Install project dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
