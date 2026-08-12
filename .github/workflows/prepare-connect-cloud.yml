@@ -35,27 +35,43 @@ jobs:
           r-version: "4.6.0"
           use-public-rspm: true
 
-      - name: Pin terra for Ubuntu 22.04
+      - name: Install Ubuntu system libraries
         shell: bash
         run: |
-          set -euo pipefail
-          cp DESCRIPTION "$RUNNER_TEMP/DESCRIPTION"
-          sed -i 's/^    terra,$/    terra (== 1.8-86),/' DESCRIPTION
-          grep -q '^    terra (== 1.8-86),$' DESCRIPTION
+          sudo apt-get update -y
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+            libx11-dev libcurl4-openssl-dev libssl-dev cmake make \
+            libuv1-dev zlib1g-dev libjpeg-dev pandoc libpng-dev \
+            libabsl-dev libgdal-dev gdal-bin libgeos-dev libproj-dev \
+            libsqlite3-dev libicu-dev libudunits2-dev
 
-      - name: Install project dependencies
-        uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          extra-packages: |
-            any::rsconnect
-          needs: check
-
-      - name: Restore project metadata
-        shell: bash
+      - name: Install R dependencies
+        shell: Rscript {0}
         run: |
-          cp "$RUNNER_TEMP/DESCRIPTION" DESCRIPTION
-          git diff --exit-code -- DESCRIPTION
+          repos <- c(CRAN = "https://cloud.r-project.org")
+          options(repos = repos, Ncpus = 2L)
+          dependency_types <- c("Depends", "Imports", "LinkingTo")
 
+          install.packages("remotes", dependencies = dependency_types)
+          remotes::install_version(
+            "terra",
+            version = "1.8-86",
+            repos = unname(repos[["CRAN"]]),
+            dependencies = dependency_types,
+            upgrade = "never"
+          )
+
+          description <- read.dcf("DESCRIPTION")
+          imports <- strsplit(description[1, "Imports"], ",", fixed = TRUE)[[1]]
+          packages <- trimws(sub("\\s*\\(.*\\)$", "", imports))
+          packages <- unique(c(setdiff(packages, "terra"), "rsconnect"))
+          install.packages(packages, dependencies = dependency_types)
+
+          missing <- packages[!vapply(packages, requireNamespace, logical(1), quietly = TRUE)]
+          if (length(missing)) {
+            stop("Packages failed to install: ", paste(missing, collapse = ", "))
+          }
+          stopifnot(identical(utils::packageDescription("terra", fields = "Version"), "1.8-86"))
       - name: Confirm R version
         shell: Rscript {0}
         run: |
