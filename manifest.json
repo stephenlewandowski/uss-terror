@@ -3587,8 +3587,8 @@
       }
     },
     "terra": {
-      "Source": "any",
-      "Repository": "CRAN",
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
       "description": {
         "Package": "terra",
         "Type": "Package",
