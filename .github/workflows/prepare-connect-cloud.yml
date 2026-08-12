@@ -40,6 +40,7 @@ jobs:
         with:
           extra-packages: |
             any::rsconnect
+            any::terra@1.8-86
           needs: check
 
       - name: Confirm R version
@@ -95,6 +96,7 @@ jobs:
             "plotly", "readr", "sf", "shiny", "terra", "yaml"
           )
           package_names <- names(manifest$packages)
+          stopifnot(identical(manifest$packages$terra$version, "1.8-86"))
           missing_packages <- setdiff(required_packages, package_names)
           if (length(missing_packages)) {
             stop("Manifest is missing packages: ", paste(missing_packages, collapse = ", "))
