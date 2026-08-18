@@ -59,8 +59,11 @@ test_that("the Shiny entry point defines one Pacific map and one shared filter r
 
 test_that("OpenStreetMap is default-capable and the local shapefile base is selectable", {
   layer_text <- paste(readLines(project_path("R", "map_layers.R"), warn = FALSE), collapse = "\n")
+  app_text <- paste(readLines(project_path("app.R"), warn = FALSE), collapse = "\n")
   expect_match(layer_text, '"OpenStreetMap"')
   expect_match(layer_text, "Local boundaries & labels")
-  expect_match(layer_text, 'selected_base <- if \\(allow_online\\) "OpenStreetMap"')
+  expect_match(layer_text, 'identical\\(initial_basemap, "OpenStreetMap"\\)')
+  expect_match(layer_text, "switch_deployment_basemap")
+  expect_match(app_text, '"pacific_basemap"')
   expect_false(grepl("Neutral local historical map", layer_text, fixed = TRUE))
 })

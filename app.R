@@ -41,9 +41,17 @@ locations <- st_read(gpkg, layer = "locations", quiet = TRUE)
 uncertainty <- st_read(gpkg, layer = "uncertainty_areas", quiet = TRUE)
 operating_regions <- st_read(gpkg, layer = "major_operating_regions", quiet = TRUE)
 land <- st_read(gpkg, layer = "natural_earth_land", quiet = TRUE)
-boundary_shapefile <- project_path(
-  "data", "reference", "simple_boundaries", "natural_earth_boundaries.shp"
+boundary_shapefile_candidates <- c(
+  project_path(
+    "data", "reference", "simple_boundaries", "natural_earth_boundaries_pacific.shp"
+  ),
+  project_path(
+    "data", "reference", "simple_boundaries", "natural_earth_boundaries.shp"
+  )
 )
+boundary_shapefile <- boundary_shapefile_candidates[
+  file.exists(boundary_shapefile_candidates)
+][1]
 boundaries <- if (file.exists(boundary_shapefile)) {
   st_read(boundary_shapefile, quiet = TRUE)
 } else {
@@ -68,6 +76,16 @@ events$event_visual_class <- event_visual_class(events$event_category)
 event_categories <- sort(unique(events$event_category))
 confidence_choices <- sort(unique(tolower(c(events$historical_confidence, routes$route_confidence))))
 offline_override <- tolower(Sys.getenv("USS_TERROR_OFFLINE", unset = "false")) %in% c("1", "true", "yes")
+online_basemaps_allowed <- deployment_online_basemaps_allowed(settings, offline_override)
+basemap_choices <- if (online_basemaps_allowed) {
+  c(
+    "OpenStreetMap" = "OpenStreetMap",
+    "Local boundaries & labels" = "Local boundaries & labels"
+  )
+} else {
+  c("Local boundaries & labels" = "Local boundaries & labels")
+}
+default_basemap <- unname(basemap_choices[[1]])
 default_start <- as.Date(setting_value(settings, c("display", "default_start_date"), settings$default_start_date %||% min(events$date_start)))
 default_end <- as.Date(setting_value(settings, c("display", "default_end_date"), settings$default_end_date %||% max(events$date_end)))
 maximum_speed <- as.numeric(setting_value(
@@ -135,7 +153,19 @@ map_sidebar <- sidebar(
   ),
   div(class = "evidence-note", "Lines connect documented endpoints by great-circle interpolation. They are not daily positions or an exact ship track."),
   hr(),
+  h4("Basemap"),
+  selectInput(
+    "pacific_basemap", NULL, choices = basemap_choices,
+    selected = default_basemap, selectize = FALSE
+  ),
   h4("Modern geographic context"),
+  if (online_basemaps_allowed && isTRUE(setting_value(settings, c("nautical_layers", "gebco", "enabled"), FALSE))) {
+    checkboxInput("show_gebco", "GEBCO global bathymetric relief", value = FALSE)
+  },
+  if (online_basemaps_allowed && isTRUE(setting_value(settings, c("nautical_layers", "openseamap", "enabled"), FALSE))) {
+    checkboxInput("show_openseamap", "Modern OpenSeaMap seamarks", value = FALSE)
+  },
+  checkboxInput("show_operating_regions", "Show modeled operating regions", value = FALSE),
   checkboxInput("show_gmrt_bathymetry", "GMRT regional bathymetry — modern context", value = FALSE),
   checkboxInput("show_gmrt_coverage", "GMRT curated multibeam coverage", value = FALSE),
   uiOutput("gmrt_cache_status"),
@@ -170,7 +200,27 @@ ui <- page_navbar(
         card(
           full_screen = TRUE,
           card_header("USS Terror deployment interactive view"),
-          leafletOutput("pacific_map", height = "720px")
+          div(
+            class = "pacific-map-shell",
+            div(
+              id = "pacific_map_loading", class = "map-loading", role = "status",
+              span(class = "map-loading-spinner", `aria-hidden` = "true"),
+              span("Loading map data and basemap…")
+            ),
+            leafletOutput("pacific_map", height = "720px"),
+            tags$script(HTML(
+              "$(document).on('shiny:value', function(event) {\n",
+              "  if (event.target.id === 'pacific_map') {\n",
+              "    $('#pacific_map_loading').attr('hidden', true);\n",
+              "  }\n",
+              "});\n",
+              "$(document).on('shiny:error', function(event) {\n",
+              "  if (event.target.id === 'pacific_map') {\n",
+              "    $('#pacific_map_loading').addClass('map-loading-error').text('The map is taking longer than expected. Check the connection and retry.');\n",
+              "  }\n",
+              "});"
+            ))
+          )
         ),
         card(card_header("Selected event"), uiOutput("event_detail"), min_height = "340px"),
         col_widths = c(9, 3)
@@ -345,22 +395,55 @@ server <- function(input, output, session) {
   })
   output$pacific_map <- renderLeaflet({
     dat <- isolate(filtered_map_data())
+    show_uncertainty <- isTRUE(isolate(input$show_uncertainty))
+    show_regions <- isTRUE(isolate(input$show_operating_regions))
     initialize_deployment_map(
-      dat$events, dat$routes, boundaries, isolate(filtered_uncertainty()), isolate(filtered_regions()), settings,
-      view_lng = 175, view_lat = 10, view_zoom = 3, offline = offline_override
+      dat$events, dat$routes, boundaries,
+      if (show_uncertainty) isolate(filtered_uncertainty()) else NULL,
+      if (show_regions) isolate(filtered_regions()) else NULL,
+      settings, view_lng = 175, view_lat = 10, view_zoom = 3,
+      offline = offline_override, initial_basemap = isolate(input$pacific_basemap),
+      show_disputed = isTRUE(dat$show_disputed),
+      show_uncertainty = show_uncertainty,
+      show_regions = show_regions
     )
   })
 
-  observe({
+  observeEvent(
+    list(filtered_map_data(), input$show_uncertainty, input$show_operating_regions),
+    {
     dat <- filtered_map_data()
     u <- filtered_uncertainty()
     regions <- filtered_regions()
     update_deployment_map(
       leafletProxy("pacific_map", session), dat$events, dat$routes, u, regions,
       palette_domain = events$event_visual_class, show_disputed = isTRUE(input$show_disputed),
-      show_uncertainty = isTRUE(input$show_uncertainty)
+      show_uncertainty = isTRUE(input$show_uncertainty),
+      show_regions = isTRUE(input$show_operating_regions)
     )
-  })
+    }, ignoreInit = TRUE
+  )
+
+  observeEvent(input$pacific_basemap, {
+    switch_deployment_basemap(
+      leafletProxy("pacific_map", session), boundaries,
+      input$pacific_basemap, settings, offline = offline_override
+    )
+  }, ignoreInit = TRUE)
+
+  observeEvent(input$show_gebco, {
+    toggle_deployment_context_layer(
+      leafletProxy("pacific_map", session), "gebco", input$show_gebco,
+      settings, offline = offline_override
+    )
+  }, ignoreInit = TRUE)
+
+  observeEvent(input$show_openseamap, {
+    toggle_deployment_context_layer(
+      leafletProxy("pacific_map", session), "openseamap", input$show_openseamap,
+      settings, offline = offline_override
+    )
+  }, ignoreInit = TRUE)
 
   observe({
     event <- selected_event()
@@ -687,7 +770,6 @@ server <- function(input, output, session) {
   )
 
   output$timeline <- renderPlotly(build_timeline_plot(filtered_map_data()$events, source = "terror_timeline"))
-  outputOptions(output, "timeline", suspendWhenHidden = FALSE)
   output$event_detail <- renderUI(event_detail_ui(selected_event()))
   output$timeline_detail <- renderUI(event_detail_ui(selected_event()))
 

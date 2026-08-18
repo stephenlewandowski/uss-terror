@@ -13,6 +13,10 @@ required <- c(
   "data/reference/simple_boundaries/natural_earth_boundaries.shx",
   "data/reference/simple_boundaries/natural_earth_boundaries.dbf",
   "data/reference/simple_boundaries/natural_earth_boundaries.prj",
+  "data/reference/simple_boundaries/natural_earth_boundaries_pacific.shp",
+  "data/reference/simple_boundaries/natural_earth_boundaries_pacific.shx",
+  "data/reference/simple_boundaries/natural_earth_boundaries_pacific.dbf",
+  "data/reference/simple_boundaries/natural_earth_boundaries_pacific.prj",
   "outputs/reports/source_inventory.csv", "outputs/reports/project_resume_audit.md",
   "outputs/reports/validation_report.md", "outputs/reports/year_filter_validation.md",
   "outputs/reports/antimeridian_validation.md", "outputs/reports/coordinate_review.csv",
@@ -38,6 +42,15 @@ if (length(missing_boundary_fields)) {
 }
 if (!nrow(boundaries) || any(!sf::st_is_valid(boundaries))) {
   stop("Simple boundary shapefile is empty or contains invalid geometry.", call. = FALSE)
+}
+
+pacific_boundary_path <- file.path(
+  project, "data", "reference", "simple_boundaries", "natural_earth_boundaries_pacific.shp"
+)
+pacific_boundaries <- sf::st_read(pacific_boundary_path, quiet = TRUE)
+if (!nrow(pacific_boundaries) || nrow(pacific_boundaries) >= nrow(boundaries) ||
+    any(!sf::st_is_valid(pacific_boundaries))) {
+  stop("Pacific boundary shapefile is empty, invalid, or not reduced from the full layer.", call. = FALSE)
 }
 
 qgis_candidates <- file.path(project, "qgis", c("uss_terror_layers_phase4.gpkg", "uss_terror_layers.gpkg"))

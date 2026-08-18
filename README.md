@@ -37,7 +37,7 @@ Rscript scripts/validate_all.R
 Rscript scripts/launch_app.R
 ```
 
-The app opens at `http://127.0.0.1:3838/` only while the local R/Shiny process is running. OpenStreetMap is the normal default base layer. To force fully local operation, set `USS_TERROR_OFFLINE=true` before launching; the generated Natural Earth shapefile boundary-and-label base becomes the default and the Pacific map, timeline, tables, reports, and candidate-review interface continue to work without tiles.
+The app opens at `http://127.0.0.1:3838/` only while the local R/Shiny process is running. OpenStreetMap is the normal default base layer; the basemap selector can switch to a simplified Pacific-only Natural Earth boundary-and-label base. To force fully local operation, set `USS_TERROR_OFFLINE=true` before launching; online basemap and modern-context controls are then omitted and the Pacific map, timeline, tables, reports, and candidate-review interface continue to work without tiles.
 
 ## Reproducible R and RStudio setup
 
@@ -57,6 +57,7 @@ data/processed/route_legs.gpkg    data/processed/route_legs.csv
 data/processed/locations.gpkg     data/processed/locations.csv
 data/processed/conflicts.csv
 data/reference/simple_boundaries/natural_earth_boundaries.shp
+data/reference/simple_boundaries/natural_earth_boundaries_pacific.shp
 qgis/uss_terror_layers.gpkg
 data/processed/pacific_mine_warfare.gpkg
 outputs/reports/gmrt_inventory.csv
@@ -67,7 +68,7 @@ All canonical spatial data use EPSG:4326 (WGS84). The consolidated QGIS GeoPacka
 
 ## Shiny application
 
-The cleaner top navigation provides the primary **Pacific Theater** map, grouped deployment records, **Historical Mine Warfare**, and grouped research pages. Five compact route metrics summarize visible events, route legs, reconstructed distance, combat/damage events, and unique port/shipyard days. One shared reactive filter supplies the map, timeline, tables, counts, selection, and navigation. OpenStreetMap is selected by default when online; the expanded layer control also offers GEBCO and a simple local boundary-and-label base generated as an ESRI Shapefile. The explicit year choices are All years and 1943–1946. Selected-year inclusion uses interval overlap; a cross-year leg appears in each overlapping year as its complete endpoint-to-endpoint connector. Cumulative mode is separate. Pacific centering changes presentation, not the EPSG:4326 master coordinates or Leaflet projection.
+The cleaner top navigation provides the primary **Pacific Theater** map, grouped deployment records, **Historical Mine Warfare**, and grouped research pages. Five compact route metrics summarize visible events, route legs, reconstructed distance, combat/damage events, and unique port/shipyard days. One shared reactive filter supplies the map, timeline, tables, counts, selection, and navigation. OpenStreetMap is selected by default when online; the basemap selector can load the simplified Pacific boundary-and-label base on demand. GEBCO and OpenSeaMap are also loaded only when selected. The explicit year choices are All years and 1943–1946. Selected-year inclusion uses interval overlap; a cross-year leg appears in each overlapping year as its complete endpoint-to-endpoint connector. Cumulative mode is separate. Pacific centering changes presentation, not the EPSG:4326 master coordinates or Leaflet projection.
 
 Visual evidence conventions use line type and marker symbol in addition to color:
 
