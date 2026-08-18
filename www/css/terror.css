@@ -26,6 +26,21 @@ body { background: var(--paper); color: var(--ink); }
 .evidence-note, .table-note { border-left: 3px solid var(--rust); padding: .65rem .8rem; background: #fffaf0; font-size: .88rem; }
 .terror-popup { min-width: 260px; max-width: 360px; line-height: 1.35; }
 .leaflet-container { background: #dceaf2; }
+.pacific-map-shell { position: relative; min-height: 720px; background: #dceaf2; }
+.pacific-map-shell .leaflet-container { min-height: 720px; }
+.map-loading {
+  position: absolute; inset: 0; z-index: 1000; display: flex; align-items: center;
+  justify-content: center; gap: .65rem; padding: 1rem; color: #173B57;
+  background: linear-gradient(135deg, rgba(220,234,242,.98), rgba(244,241,234,.98));
+  font-weight: 700; letter-spacing: .01em;
+}
+.map-loading[hidden] { display: none !important; }
+.map-loading-spinner {
+  width: 1.15rem; height: 1.15rem; border: .18rem solid rgba(23,59,87,.22);
+  border-top-color: #173B57; border-radius: 50%; animation: map-loading-spin .8s linear infinite;
+}
+.map-loading-error { text-align: center; color: #702B20; background: rgba(255,240,209,.97); }
+@keyframes map-loading-spin { to { transform: rotate(360deg); } }
 .leaflet-tooltip.simple-boundary-label {
   background: transparent;
   border: 0;

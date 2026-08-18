@@ -173,7 +173,8 @@ add_simple_boundary_basemap <- function(
 }
 
 add_historical_map_layers <- function(map, events, routes, uncertainty = NULL,
-                                      operating_regions = NULL, palette_domain = NULL) {
+                                      operating_regions = NULL, palette_domain = NULL,
+                                      show_disputed = TRUE) {
   events_display <- shift_longitude_360(events)
   routes_display <- shift_longitude_360(routes)
   palette_domain <- palette_domain %||% events_display$event_visual_class
@@ -185,10 +186,14 @@ add_historical_map_layers <- function(map, events, routes, uncertainty = NULL,
   estimated <- routes_display[
     routes_display$include_default_map & tolower(routes_display$route_confidence) != "high",
   ]
-  disputed <- routes_display[
-    !routes_display$include_default_map |
-      grepl("disput|conflict|exclude|unsupported", routes_display$source_status, ignore.case = TRUE),
-  ]
+  disputed <- if (isTRUE(show_disputed)) {
+    routes_display[
+      !routes_display$include_default_map |
+        grepl("disput|conflict|exclude|unsupported", routes_display$source_status, ignore.case = TRUE),
+    ]
+  } else {
+    routes_display[0, , drop = FALSE]
+  }
 
   if (nrow(included)) {
     map <- leaflet::addPolylines(
@@ -250,7 +255,9 @@ add_historical_map_layers <- function(map, events, routes, uncertainty = NULL,
 
 initialize_deployment_map <- function(events, routes, boundaries, uncertainty, operating_regions,
                                       settings, view_lng, view_lat, view_zoom,
-                                      offline = FALSE) {
+                                      offline = FALSE, initial_basemap = NULL,
+                                      show_disputed = TRUE, show_uncertainty = TRUE,
+                                      show_regions = TRUE) {
   map <- leaflet::leaflet(options = leaflet::leafletOptions(
     worldCopyJump = FALSE, minZoom = 1, preferCanvas = TRUE
   )) |>
@@ -260,65 +267,29 @@ initialize_deployment_map <- function(events, routes, boundaries, uncertainty, o
     settings, c("display", "allow_online_basemaps"),
     settings$allow_online_basemaps %||% FALSE
   )) && !isTRUE(offline)
-  base_groups <- character()
-  if (allow_online) {
-    map <- leaflet::addProviderTiles(
-      map, leaflet::providers$OpenStreetMap, group = "OpenStreetMap",
-      options = leaflet::providerTileOptions(noWrap = FALSE)
-    )
-    base_groups <- "OpenStreetMap"
-
-    gebco <- setting_value(settings, c("nautical_layers", "gebco"), list())
-    if (isTRUE(gebco$enabled) && nzchar(gebco$wms_url %||% "") && nzchar(gebco$layer_name %||% "")) {
-      map <- tryCatch(
-        leaflet::addWMSTiles(
-          map, baseUrl = gebco$wms_url, group = gebco$label %||% "GEBCO global bathymetric relief",
-          layers = gebco$layer_name, options = leaflet::WMSTileOptions(
-            format = "image/png", transparent = FALSE,
-            opacity = as.numeric(gebco$opacity %||% 0.65), noWrap = FALSE
-          ), attribution = gebco$attribution %||% "GEBCO Compilation Group"
-        ),
-        error = function(e) map
-      )
-      base_groups <- c(base_groups, gebco$label %||% "GEBCO global bathymetric relief")
-    }
-
-    openseamap <- setting_value(settings, c("nautical_layers", "openseamap"), list())
-    if (isTRUE(openseamap$enabled) && nzchar(openseamap$tile_url %||% "")) {
-      map <- tryCatch(
-        leaflet::addTiles(
-          map, urlTemplate = openseamap$tile_url,
-          group = openseamap$label %||% "Modern OpenSeaMap seamarks — reference only",
-          options = leaflet::tileOptions(maxZoom = openseamap$max_zoom %||% 18, noWrap = FALSE),
-          attribution = openseamap$attribution %||% "OpenSeaMap contributors"
-        ),
-        error = function(e) map
-      )
-    }
+  initial_basemap <- as.character(initial_basemap %||% if (allow_online) "OpenStreetMap" else "Local boundaries & labels")
+  if (allow_online && identical(initial_basemap, "OpenStreetMap")) {
+    map <- add_openstreetmap_basemap(map)
+  } else {
+    map <- add_simple_boundary_basemap(map, boundaries, deployment_local_group)
   }
-
-  local_group <- "Local boundaries & labels"
-  map <- add_simple_boundary_basemap(map, boundaries, local_group)
-  base_groups <- c(base_groups, local_group)
 
   map <- add_historical_map_layers(
     map, events, routes, uncertainty, operating_regions,
-    palette_domain = events$event_visual_class
+    palette_domain = events$event_visual_class, show_disputed = show_disputed
   )
-  overlays <- unique(c(historical_map_groups(), modern_map_groups(settings, offline)))
+  overlays <- historical_map_groups()
   map <- leaflet::addLayersControl(
-    map, baseGroups = base_groups, overlayGroups = overlays,
+    map, overlayGroups = overlays,
     options = leaflet::layersControlOptions(collapsed = FALSE)
   )
 
   hidden <- c(
-    "Disputed/excluded route legs", "Position uncertainty",
-    "Major operating regions (modeled)", modern_map_groups(settings, offline)
+    if (!isTRUE(show_disputed)) "Disputed/excluded route legs",
+    if (!isTRUE(show_uncertainty)) "Position uncertainty",
+    if (!isTRUE(show_regions)) "Major operating regions (modeled)"
   )
   if (length(hidden)) map <- leaflet::hideGroup(map, hidden)
-  selected_base <- if (allow_online) "OpenStreetMap" else local_group
-  other_bases <- setdiff(base_groups, selected_base)
-  if (length(other_bases)) map <- leaflet::hideGroup(map, other_bases)
   legend_html <- htmltools::HTML(
     "<div class='route-legend'><strong>Historical reconstruction</strong><br><span class='solid-line'>━━</span> included/high confidence<br><span class='dash-line'>┅┅</span> estimated reconstruction<br><span class='dot-line'>•••</span> disputed/excluded<br><small>Endpoint-to-endpoint geodesics are not exact ship tracks.</small></div>"
   )
@@ -326,12 +297,95 @@ initialize_deployment_map <- function(events, routes, boundaries, uncertainty, o
   map
 }
 
+deployment_layer_ids <- c(
+  osm = "deployment-openstreetmap",
+  gebco = "deployment-gebco",
+  openseamap = "deployment-openseamap"
+)
+deployment_local_group <- "Local boundaries & labels"
+
+deployment_online_basemaps_allowed <- function(settings, offline = FALSE) {
+  isTRUE(setting_value(
+    settings, c("display", "allow_online_basemaps"),
+    settings$allow_online_basemaps %||% FALSE
+  )) && !isTRUE(offline)
+}
+
+add_openstreetmap_basemap <- function(map) {
+  leaflet::addProviderTiles(
+    map, leaflet::providers$OpenStreetMap,
+    layerId = unname(deployment_layer_ids[["osm"]]),
+    group = "OpenStreetMap",
+    options = leaflet::providerTileOptions(noWrap = FALSE)
+  )
+}
+
+add_gebco_context_layer <- function(map, settings) {
+  gebco <- setting_value(settings, c("nautical_layers", "gebco"), list())
+  if (!isTRUE(gebco$enabled) || !nzchar(gebco$wms_url %||% "") || !nzchar(gebco$layer_name %||% "")) {
+    return(map)
+  }
+  tryCatch(
+    leaflet::addWMSTiles(
+      map, baseUrl = gebco$wms_url,
+      layerId = unname(deployment_layer_ids[["gebco"]]),
+      group = gebco$label %||% "GEBCO global bathymetric relief",
+      layers = gebco$layer_name, options = leaflet::WMSTileOptions(
+        format = "image/png", transparent = FALSE,
+        opacity = as.numeric(gebco$opacity %||% 0.65), noWrap = FALSE
+      ), attribution = gebco$attribution %||% "GEBCO Compilation Group"
+    ),
+    error = function(e) map
+  )
+}
+
+add_openseamap_context_layer <- function(map, settings) {
+  openseamap <- setting_value(settings, c("nautical_layers", "openseamap"), list())
+  if (!isTRUE(openseamap$enabled) || !nzchar(openseamap$tile_url %||% "")) {
+    return(map)
+  }
+  tryCatch(
+    leaflet::addTiles(
+      map, urlTemplate = openseamap$tile_url,
+      layerId = unname(deployment_layer_ids[["openseamap"]]),
+      group = openseamap$label %||% "Modern OpenSeaMap seamarks — reference only",
+      options = leaflet::tileOptions(maxZoom = openseamap$max_zoom %||% 18, noWrap = FALSE),
+      attribution = openseamap$attribution %||% "OpenSeaMap contributors"
+    ),
+    error = function(e) map
+  )
+}
+
+switch_deployment_basemap <- function(proxy, boundaries, selected, settings, offline = FALSE) {
+  allow_online <- deployment_online_basemaps_allowed(settings, offline)
+  selected <- as.character(selected %||% if (allow_online) "OpenStreetMap" else deployment_local_group)
+  proxy <- leaflet::removeTiles(proxy, unname(deployment_layer_ids[["osm"]]))
+  proxy <- leaflet::clearGroup(proxy, deployment_local_group)
+  if (allow_online && identical(selected, "OpenStreetMap")) {
+    add_openstreetmap_basemap(proxy)
+  } else {
+    add_simple_boundary_basemap(proxy, boundaries, deployment_local_group)
+  }
+}
+
+toggle_deployment_context_layer <- function(proxy, layer, enabled, settings, offline = FALSE) {
+  layer <- match.arg(layer, c("gebco", "openseamap"))
+  layer_id <- unname(deployment_layer_ids[[layer]])
+  proxy <- leaflet::removeTiles(proxy, layer_id)
+  if (!isTRUE(enabled) || isTRUE(offline)) return(proxy)
+  if (identical(layer, "gebco")) add_gebco_context_layer(proxy, settings) else add_openseamap_context_layer(proxy, settings)
+}
+
 update_deployment_map <- function(proxy, events, routes, uncertainty = NULL,
                                   operating_regions = NULL, palette_domain = NULL,
-                                  show_disputed = FALSE, show_uncertainty = FALSE) {
+                                  show_disputed = FALSE, show_uncertainty = FALSE,
+                                  show_regions = FALSE) {
   for (group in historical_map_groups()) proxy <- leaflet::clearGroup(proxy, group)
+  if (!isTRUE(show_uncertainty)) uncertainty <- NULL
+  if (!isTRUE(show_regions)) operating_regions <- NULL
   proxy <- add_historical_map_layers(
-    proxy, events, routes, uncertainty, operating_regions, palette_domain
+    proxy, events, routes, uncertainty, operating_regions, palette_domain,
+    show_disputed = show_disputed
   )
   if (isTRUE(show_disputed)) {
     proxy <- leaflet::showGroup(proxy, "Disputed/excluded route legs")
@@ -343,7 +397,12 @@ update_deployment_map <- function(proxy, events, routes, uncertainty = NULL,
   } else {
     proxy <- leaflet::hideGroup(proxy, "Position uncertainty")
   }
-  leaflet::hideGroup(proxy, "Major operating regions (modeled)")
+  if (isTRUE(show_regions)) {
+    proxy <- leaflet::showGroup(proxy, "Major operating regions (modeled)")
+  } else {
+    proxy <- leaflet::hideGroup(proxy, "Major operating regions (modeled)")
+  }
+  proxy
 }
 
 highlight_selected_event <- function(proxy, event) {

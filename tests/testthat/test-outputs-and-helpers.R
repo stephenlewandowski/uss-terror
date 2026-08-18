@@ -18,6 +18,18 @@ test_that("the local boundary shapefile includes geometry and label fields", {
   expect_true(all(sf::st_is_valid(boundaries)))
 })
 
+test_that("the Pacific boundary artifact is simplified and scoped", {
+  path <- project_path(
+    "data", "reference", "simple_boundaries", "natural_earth_boundaries_pacific.shp"
+  )
+  skip_if_not(file.exists(path), "Build outputs do not exist yet")
+  boundaries <- sf::st_read(path, quiet = TRUE)
+  expect_gt(nrow(boundaries), 0)
+  expect_lt(nrow(boundaries), 100)
+  expect_true(all(sf::st_is_valid(boundaries)))
+  expect_true(all(c("name", "admin", "labelrank", "label_x", "label_y") %in% names(boundaries)))
+})
+
 test_that("Shiny-facing table helpers retain source and review fields", {
   gpkg <- qgis_exchange_path()
   skip_if_not(file.exists(gpkg), "Build outputs do not exist yet")

@@ -29,6 +29,60 @@ export_simple_boundary_shapefile <- function(
   invisible(path)
 }
 
+export_pacific_boundary_shapefile <- function(
+    land_sf,
+    path = project_path(
+      "data", "reference", "simple_boundaries", "natural_earth_boundaries_pacific.shp"
+    ),
+    simplify_tolerance_m = 2000) {
+  dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
+  keep <- intersect(
+    c("name", "name_long", "admin", "labelrank", "label_x", "label_y"),
+    names(land_sf)
+  )
+  boundaries <- sf::st_transform(land_sf[, keep, drop = FALSE], 4326)
+
+  # The interactive map is centered on the Pacific. Keep the two longitude
+  # windows on either side of the antimeridian and a generous latitude margin.
+  pacific_windows <- sf::st_sfc(
+    sf::st_polygon(list(matrix(
+      c(100, -60, 180, -60, 180, 70, 100, 70, 100, -60),
+      ncol = 2, byrow = TRUE
+    ))),
+    sf::st_polygon(list(matrix(
+      c(-180, -60, -80, -60, -80, 70, -180, 70, -180, -60),
+      ncol = 2, byrow = TRUE
+    ))),
+    crs = 4326
+  )
+  footprint <- sf::st_union(pacific_windows)
+  intersects <- lengths(sf::st_intersects(boundaries, footprint)) > 0
+  boundaries <- boundaries[intersects, , drop = FALSE]
+
+  if (nrow(boundaries)) {
+    boundaries <- boundaries |>
+      sf::st_transform(6933) |>
+      sf::st_simplify(
+        dTolerance = simplify_tolerance_m,
+        preserveTopology = TRUE
+      ) |>
+      sf::st_make_valid() |>
+      sf::st_transform(4326)
+  }
+
+  stem <- tools::file_path_sans_ext(basename(path))
+  existing <- list.files(
+    dirname(path), pattern = paste0("^", stem, "\\."),
+    full.names = TRUE, ignore.case = TRUE
+  )
+  if (length(existing)) unlink(existing)
+  sf::st_write(
+    boundaries, path, driver = "ESRI Shapefile",
+    delete_layer = TRUE, quiet = TRUE
+  )
+  invisible(path)
+}
+
 export_spatial_data <- function(events_sf, routes_geodesic, routes_original, locations_sf,
                                 uncertainty_sf, operating_regions_sf, land_sf, conflicts) {
   processed <- project_path("data", "processed")
@@ -41,6 +95,7 @@ export_spatial_data <- function(events_sf, routes_geodesic, routes_original, loc
   readr::write_csv(sf::st_drop_geometry(locations_sf), file.path(processed, "locations.csv"), na = "")
   readr::write_csv(conflicts, file.path(processed, "conflicts.csv"), na = "")
   export_simple_boundary_shapefile(land_sf)
+  export_pacific_boundary_shapefile(land_sf)
 
   layers <- list(
     events = events_sf,
